@@ -1,2 +1,57 @@
-@font-face{font-family:favoritMono;src:url(../media/ABCFavoritMono_Regular-s.p.34cb4d54.woff2)format("woff2");font-display:swap;font-weight:400;font-style:normal}@font-face{font-family:favoritMono Fallback;src:local(Arial);ascent-override:72.31%;descent-override:29.69%;line-gap-override:0.0%;size-adjust:131.41%}.favoritmono_227e841d-module__1NIrfa__className{font-family:favoritMono,favoritMono Fallback,mono}.favoritmono_227e841d-module__1NIrfa__variable{--font-favorit-mono:"favoritMono","favoritMono Fallback",mono}
-@font-face{font-family:neueHaasGroteskDisplay;src:url(../media/NHaasGroteskDSPro_45Lt-s.p.d499d9e6.woff2)format("woff2");font-display:swap;font-weight:300;font-style:light}@font-face{font-family:neueHaasGroteskDisplay;src:url(../media/NeueHaasGroteskDisplay_Reg-s.p.036d0daf.woff2)format("woff2");font-display:swap;font-weight:400;font-style:normal}@font-face{font-family:neueHaasGroteskDisplay Fallback;src:local(Arial);ascent-override:97.99%;descent-override:24.39%;line-gap-override:0.0%;size-adjust:93.48%}.neuehaasgroteskdisplay_8f73a06d-module__rGJxXG__className{font-family:neueHaasGroteskDisplay,neueHaasGroteskDisplay Fallback,sans-serif}.neuehaasgroteskdisplay_8f73a06d-module__rGJxXG__variable{--font-neue-haas:"neueHaasGroteskDisplay","neueHaasGroteskDisplay Fallback",sans-serif}
+@font-face {
+    font-family: favoritMono;
+    src: url(../media/ABCFavoritMono_Regular-s.p.34cb4d54.woff2)format("woff2");
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: favoritMono Fallback;
+    src: local(Arial);
+    ascent-override: 72.31%;
+    descent-override: 29.69%;
+    line-gap-override: 0.0%;
+    size-adjust: 131.41%
+}
+
+.favoritmono_227e841d-module__1NIrfa__className {
+    font-family: favoritMono, favoritMono Fallback, mono
+}
+
+.favoritmono_227e841d-module__1NIrfa__variable {
+    --font-favorit-mono: "favoritMono", "favoritMono Fallback", mono
+}
+
+@font-face {
+    font-family: neueHaasGroteskDisplay;
+    src: url(../media/NHaasGroteskDSPro_45Lt-s.p.d499d9e6.woff2)format("woff2");
+    font-display: swap;
+    font-weight: 300;
+    font-style: light
+}
+
+@font-face {
+    font-family: neueHaasGroteskDisplay;
+    src: url(../media/NeueHaasGroteskDisplay_Reg-s.p.036d0daf.woff2)format("woff2");
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: neueHaasGroteskDisplay Fallback;
+    src: local(Arial);
+    ascent-override: 97.99%;
+    descent-override: 24.39%;
+    line-gap-override: 0.0%;
+    size-adjust: 93.48%
+}
+
+.neuehaasgroteskdisplay_8f73a06d-module__rGJxXG__className {
+    font-family: neueHaasGroteskDisplay, neueHaasGroteskDisplay Fallback, sans-serif
+}
+
+.neuehaasgroteskdisplay_8f73a06d-module__rGJxXG__variable {
+    --font-neue-haas: "neueHaasGroteskDisplay", "neueHaasGroteskDisplay Fallback", sans-serif
+}
