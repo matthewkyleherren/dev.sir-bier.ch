@@ -1,1 +1,281 @@
-(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,60457,e=>{"use strict";e.i(8508);var r=e.i(36028),t=e.i(53014),u=e.i(46053);e.s(["default",0,e=>{let[n,c]=(0,r.useHeaderStore)(e=>[e.addSlice,e.removeSlice],u.shallow);(0,t.useEffect)(()=>{let r=e?.current;if(r)return n(r),()=>{c(r)}},[e.current,n,c])}])},64360,e=>{"use strict";var r=e.i(71448),t=e.i(60457),u=e.i(70733),n=e.i(53014);let c=(0,n.forwardRef)(({children:e,className:c,as:i="section",isDark:l,type:s},a)=>{let o=(0,n.useRef)();l||void 0===l||(0,t.default)(o);let f=(0,n.useCallback)(e=>{o.current=e,a&&(a.current=e)},[]);return(0,r.jsx)(i,{ref:f,className:(0,u.default)(c),"data-type":!1,children:e})});e.s(["Slice",0,c])},92790,e=>{"use strict";e.i(8508);var r=e.i(33568),t=e.i(74010);function u(e,n=[]){let c=(0,r.useScrollStore)(({lenis:e})=>e);(0,t.default)(()=>{let r=r=>{c.__isStopped||e(r)};if(c)return c.on("scroll",r),e(c),()=>{c.off("scroll",r)}},[c,e,[...n]])}e.s(["default",()=>u])},88917,e=>{"use strict";var r=e.i(53014),t=e.i(73249),u=e.i(50342),n=e.i(59861);e.i(50109);var c=e.i(78194),i=e.i(82792),l=e.i(92790),s=e.i(13396),a=e.i(74010);let o={mediaQueries:Object.values(c.DeviceEnum),relativeRatio:!1,offset:[[.5,.5],[1,0]],easingFunction:e=>e};e.s(["default",0,(e,c,f=o,d=[])=>{f={...o,...f};let h=(0,r.useRef)(window.pageYOffset),v=(0,r.useRef)(!1),R=(0,i.default)(!0),m=(0,r.useRef)(0),g=(0,r.useRef)(0),p=(0,r.useRef)(0),b=(0,r.useRef)(0),x=(0,r.useRef)(!1),w=f.offset[0],y=w[0],$=w[1],S=f.offset[1],H=S[0],j=S[1],C=(0,r.useRef)(null),O=(0,r.useRef)(null);(0,n.default)(e=>{C.current=e}),(0,u.default)(e,r=>{p.current=r.borderBoxSize?.[0]?.inlineSize||e.current.offsetWidth,b.current=r.borderBoxSize?.[0]?.blockSize||e.current.offsetHeight,x.current=!0}),(0,a.default)(()=>{O.current=document.body},[]),(0,u.default)(O,()=>{v.current=C.current&&-1!==f.mediaQueries.indexOf(C.current),v.current&&(g.current=e.current?(0,s.offsetTop)(e.current):0),x.current=!0},[C.current]),(0,l.default)(({animatedScroll:e})=>{h.current=e||0});let T=(0,r.useCallback)(()=>{if(v.current&&e.current&&R.current.documentHeight&&b.current){let e=x.current?1:f.ease||1,r=y*b.current-$*R.current.documentHeight,t=H*b.current-j*R.current.documentHeight;m.current+=((h.current-(r+g.current))/(t-r)-m.current)*e,x.current=!1,c(f?.easingFunction?f.easingFunction(m.current):m.current,{easing:e,originalRatio:m.current,scrollY:h.current,top:g.current,height:b.current,viewport:R.current})}else m.current=0,c(m.current,{originalRatio:m.current,scrollY:h.current,top:g.current,height:b.current,viewport:R.current})},d);(0,t.default)(T)}])},23687,e=>{"use strict";var r=e.i(71448),t=e.i(70733),u=e.i(53014),n=e.i(35312);let c={current:void 0};var i=e.i(88917);e.i(50109);var l=e.i(78194),s=e.i(97854);let a=(0,u.forwardRef)(({children:e,useViewportRatio:t,scaleToFit:a,offset:o=[[.5,.5],[1,0]],x:f=0,y:d=0,scaleInit:h=1,rotateInit:v=0,rotate:R=0,className:m,easingFunction:g=e=>e,transform:p,mediaQueries:b=Object.values(l.DeviceEnum),as:x="div",unit:w="px",disableTouchDevice:y=!0},$)=>{let S=(0,u.useRef)(null),H=(0,u.useRef)(v),j=(0,u.useRef)(0),C=(0,u.useRef)(0),O=(0,u.useRef)(0),T=(0,u.useRef)(null),M=(0,u.useRef)(null),z=(0,u.useRef)(!1),B=(0,n.default)(!0),F=!!y&&(void 0===c.current&&(c.current=!window.matchMedia("(hover: hover)").matches),c.current);return(0,i.default)(S,(e,{scrollY:r,top:u,height:n,viewport:c,originalRatio:i})=>{if(j.current=n,!(b.includes(B?.current)&&!1===F))return!1;let l=t?f*c.innerWidth:f,o=t?d*c.documentHeight:d,m=h;if(a){let e=(c.documentHeight-n)/2,r=c.documentHeight+n;m+=Math.max(1,(n+2*o*e/r*2)/n)-1}let g=u-r,x=c.documentHeight;C.current=e*(void 0!==f?f:0)*(t?Math.abs(l):1),O.current=e*(void 0!==d?d:0)*(t?Math.abs(o):1),(R||v)&&(H.current=-R*g/x+v);let y={x:(0,s.precision)(C.current),y:(0,s.precision)(O.current),rotate:R},$=g+O.current,k=$+n>=0&&$<=x||g+n>=0&&g<=x,E={ratio:e,originalRatio:i,ref:S,top:u,height:n,viewport:c,inView:k,enabled:!1},N=H.current?` rotate(${H.current}deg)`:"";S.current&&k&&(y.x!==T.current||y.y!==M.current)?(S.current.style.transform=p?p(y,{...E,enabled:!0}):`translate3d(${y.x}${w},${y.y}${w},0)${N} scale(${m})`,S.current.style.willChange="transform",z.current=!0):S.current&&!k&&z.current&&(S.current.style.transform=p?p(y,E):`translate(${y.x}${w},${y.y}${w})${N} scale(${m})`,S.current.style.willChange="",z.current=!1),T.current=y.x,M.current=y.y},{offset:o,easingFunction:g,mediaQueries:b},[f,d,p,g]),(0,r.jsx)(x,{ref:e=>{S.current=e,$&&($.current=e)},className:m,children:e})});e.s(["ParallaxMedia",0,({as:e="div",distance:u=100,useViewportRatio:n=!1,clip:c=!0,offset:i=[[.5,.5],[1,0]],children:l,scrollProps:s={},className:o,...f})=>(0,r.jsx)(e,{...f,className:(0,t.default)(o,c&&"overflow-clip"),children:(0,r.jsx)(a,{...s,y:u,useViewportRatio:n,offset:i,scaleToFit:!0,children:l})})],23687)}]);
+(globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push(["object" == typeof document ? document.currentScript :
+    void 0, 60457, e => {
+        "use strict";
+        e.i(8508);
+        var r = e.i(36028),
+            t = e.i(53014),
+            u = e.i(46053);
+        e.s(["default", 0, e => {
+            let [n, c] = (0, r.useHeaderStore)(e => [e.addSlice, e.removeSlice], u.shallow);
+            (0, t.useEffect)(() => {
+                let r = e?.current;
+                if (r) return n(r), () => {
+                    c(r)
+                }
+            }, [e.current, n, c])
+        }])
+    },
+    64360, e => {
+        "use strict";
+        var r = e.i(71448),
+            t = e.i(60457),
+            u = e.i(70733),
+            n = e.i(53014);
+        let c = (0, n.forwardRef)(({
+            children: e,
+            className: c,
+            as: i = "section",
+            isDark: l,
+            type: s
+        }, a) => {
+            let o = (0, n.useRef)();
+            l || void 0 === l || (0, t.default)(o);
+            let f = (0, n.useCallback)(e => {
+                o.current = e, a && (a.current = e)
+            }, []);
+            return (0, r.jsx)(i, {
+                ref: f,
+                className: (0, u.default)(c),
+                "data-type": !1,
+                children: e
+            })
+        });
+        e.s(["Slice", 0, c])
+    },
+    92790, e => {
+        "use strict";
+        e.i(8508);
+        var r = e.i(33568),
+            t = e.i(74010);
+
+        function u(e, n = []) {
+            let c = (0, r.useScrollStore)(({
+                lenis: e
+            }) => e);
+            (0, t.default)(() => {
+                let r = r => {
+                    c.__isStopped || e(r)
+                };
+                if (c) return c.on("scroll", r), e(c), () => {
+                    c.off("scroll", r)
+                }
+            }, [c, e, [...n]])
+        }
+        e.s(["default", () => u])
+    },
+    88917, e => {
+        "use strict";
+        var r = e.i(53014),
+            t = e.i(73249),
+            u = e.i(50342),
+            n = e.i(59861);
+        e.i(50109);
+        var c = e.i(78194),
+            i = e.i(82792),
+            l = e.i(92790),
+            s = e.i(13396),
+            a = e.i(74010);
+        let o = {
+            mediaQueries: Object.values(c.DeviceEnum),
+            relativeRatio: !1,
+            offset: [
+                [.5, .5],
+                [1, 0]
+            ],
+            easingFunction: e => e
+        };
+        e.s(["default", 0, (e, c, f = o, d = []) => {
+            f = {
+                ...o,
+                ...f
+            };
+            let h = (0, r.useRef)(window.pageYOffset),
+                v = (0, r.useRef)(!1),
+                R = (0, i.default)(!0),
+                m = (0, r.useRef)(0),
+                g = (0, r.useRef)(0),
+                p = (0, r.useRef)(0),
+                b = (0, r.useRef)(0),
+                x = (0, r.useRef)(!1),
+                w = f.offset[0],
+                y = w[0],
+                $ = w[1],
+                S = f.offset[1],
+                H = S[0],
+                j = S[1],
+                C = (0, r.useRef)(null),
+                O = (0, r.useRef)(null);
+            (0, n.default)(e => {
+                C.current = e
+            }), (0, u.default)(e, r => {
+                p.current = r.borderBoxSize?.[0]?.inlineSize || e.current.offsetWidth, b
+                    .current = r.borderBoxSize?.[0]?.blockSize || e.current.offsetHeight, x
+                    .current = !0
+            }), (0, a.default)(() => {
+                O.current = document.body
+            }, []), (0, u.default)(O, () => {
+                v.current = C.current && -1 !== f.mediaQueries.indexOf(C.current), v.current &&
+                    (g.current = e.current ? (0, s.offsetTop)(e.current) : 0), x.current = !0
+            }, [C.current]), (0, l.default)(({
+                animatedScroll: e
+            }) => {
+                h.current = e || 0
+            });
+            let T = (0, r.useCallback)(() => {
+                if (v.current && e.current && R.current.documentHeight && b.current) {
+                    let e = x.current ? 1 : f.ease || 1,
+                        r = y * b.current - $ * R.current.documentHeight,
+                        t = H * b.current - j * R.current.documentHeight;
+                    m.current += ((h.current - (r + g.current)) / (t - r) - m.current) * e,
+                        x.current = !1, c(f?.easingFunction ? f.easingFunction(m.current) :
+                            m.current, {
+                                easing: e,
+                                originalRatio: m.current,
+                                scrollY: h.current,
+                                top: g.current,
+                                height: b.current,
+                                viewport: R.current
+                            })
+                } else m.current = 0, c(m.current, {
+                    originalRatio: m.current,
+                    scrollY: h.current,
+                    top: g.current,
+                    height: b.current,
+                    viewport: R.current
+                })
+            }, d);
+            (0, t.default)(T)
+        }])
+    },
+    23687, e => {
+        "use strict";
+        var r = e.i(71448),
+            t = e.i(70733),
+            u = e.i(53014),
+            n = e.i(35312);
+        let c = {
+            current: void 0
+        };
+        var i = e.i(88917);
+        e.i(50109);
+        var l = e.i(78194),
+            s = e.i(97854);
+        let a = (0, u.forwardRef)(({
+            children: e,
+            useViewportRatio: t,
+            scaleToFit: a,
+            offset: o = [
+                [.5, .5],
+                [1, 0]
+            ],
+            x: f = 0,
+            y: d = 0,
+            scaleInit: h = 1,
+            rotateInit: v = 0,
+            rotate: R = 0,
+            className: m,
+            easingFunction: g = e => e,
+            transform: p,
+            mediaQueries: b = Object.values(l.DeviceEnum),
+            as: x = "div",
+            unit: w = "px",
+            disableTouchDevice: y = !0
+        }, $) => {
+            let S = (0, u.useRef)(null),
+                H = (0, u.useRef)(v),
+                j = (0, u.useRef)(0),
+                C = (0, u.useRef)(0),
+                O = (0, u.useRef)(0),
+                T = (0, u.useRef)(null),
+                M = (0, u.useRef)(null),
+                z = (0, u.useRef)(!1),
+                B = (0, n.default)(!0),
+                F = !!y && (void 0 === c.current && (c.current = !window.matchMedia("(hover: hover)")
+                    .matches), c.current);
+            return (0, i.default)(S, (e, {
+                scrollY: r,
+                top: u,
+                height: n,
+                viewport: c,
+                originalRatio: i
+            }) => {
+                if (j.current = n, !(b.includes(B?.current) && !1 === F)) return !1;
+                let l = t ? f * c.innerWidth : f,
+                    o = t ? d * c.documentHeight : d,
+                    m = h;
+                if (a) {
+                    let e = (c.documentHeight - n) / 2,
+                        r = c.documentHeight + n;
+                    m += Math.max(1, (n + 2 * o * e / r * 2) / n) - 1
+                }
+                let g = u - r,
+                    x = c.documentHeight;
+                C.current = e * (void 0 !== f ? f : 0) * (t ? Math.abs(l) : 1), O.current = e *
+                    (void 0 !== d ? d : 0) * (t ? Math.abs(o) : 1), (R || v) && (H.current = -
+                        R * g / x + v);
+                let y = {
+                        x: (0, s.precision)(C.current),
+                        y: (0, s.precision)(O.current),
+                        rotate: R
+                    },
+                    $ = g + O.current,
+                    k = $ + n >= 0 && $ <= x || g + n >= 0 && g <= x,
+                    E = {
+                        ratio: e,
+                        originalRatio: i,
+                        ref: S,
+                        top: u,
+                        height: n,
+                        viewport: c,
+                        inView: k,
+                        enabled: !1
+                    },
+                    N = H.current ? ` rotate(${H.current}deg)` : "";
+                S.current && k && (y.x !== T.current || y.y !== M.current) ? (S.current.style
+                        .transform = p ? p(y, {
+                            ...E,
+                            enabled: !0
+                        }) : `translate3d(${y.x}${w},${y.y}${w},0)${N} scale(${m})`, S.current
+                        .style.willChange = "transform", z.current = !0) : S.current && !k && z
+                    .current && (S.current.style.transform = p ? p(y, E) :
+                        `translate(${y.x}${w},${y.y}${w})${N} scale(${m})`, S.current.style
+                        .willChange = "", z.current = !1), T.current = y.x, M.current = y.y
+            }, {
+                offset: o,
+                easingFunction: g,
+                mediaQueries: b
+            }, [f, d, p, g]), (0, r.jsx)(x, {
+                ref: e => {
+                    S.current = e, $ && ($.current = e)
+                },
+                className: m,
+                children: e
+            })
+        });
+        e.s(["ParallaxMedia", 0, ({
+            as: e = "div",
+            distance: u = 100,
+            useViewportRatio: n = !1,
+            clip: c = !0,
+            offset: i = [
+                [.5, .5],
+                [1, 0]
+            ],
+            children: l,
+            scrollProps: s = {},
+            className: o,
+            ...f
+        }) => (0, r.jsx)(e, {
+            ...f,
+            className: (0, t.default)(o, c && "overflow-clip"),
+            children: (0, r.jsx)(a, {
+                ...s,
+                y: u,
+                useViewportRatio: n,
+                offset: i,
+                scaleToFit: !0,
+                children: l
+            })
+        })], 23687)
+    }
+]);

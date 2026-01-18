@@ -1,1 +1,2075 @@
-(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,38158,(e,t,r)=>{"use strict";var n=function(e){var t,r,n;return!!(t=e)&&"object"==typeof t&&(r=e,"[object RegExp]"!==(n=Object.prototype.toString.call(r))&&"[object Date]"!==n&&r.$$typeof!==s)},s="function"==typeof Symbol&&Symbol.for?Symbol.for("react.element"):60103;function a(e,t){return!1!==t.clone&&t.isMergeableObject(e)?u(Array.isArray(e)?[]:{},e,t):e}function i(e,t,r){return e.concat(t).map(function(e){return a(e,r)})}function o(e){return Object.keys(e).concat(Object.getOwnPropertySymbols?Object.getOwnPropertySymbols(e).filter(function(t){return Object.propertyIsEnumerable.call(e,t)}):[])}function l(e,t){try{return t in e}catch(e){return!1}}function u(e,t,r){(r=r||{}).arrayMerge=r.arrayMerge||i,r.isMergeableObject=r.isMergeableObject||n,r.cloneUnlessOtherwiseSpecified=a;var s,c,p=Array.isArray(t);return p!==Array.isArray(e)?a(t,r):p?r.arrayMerge(e,t,r):(c={},(s=r).isMergeableObject(e)&&o(e).forEach(function(t){c[t]=a(e[t],s)}),o(t).forEach(function(r){l(e,r)&&!(Object.hasOwnProperty.call(e,r)&&Object.propertyIsEnumerable.call(e,r))||(l(e,r)&&s.isMergeableObject(t[r])?c[r]=(function(e,t){if(!t.customMerge)return u;var r=t.customMerge(e);return"function"==typeof r?r:u})(r,s)(e[r],t[r],s):c[r]=a(t[r],s))}),c)}u.all=function(e,t){if(!Array.isArray(e))throw Error("first argument should be an array");return e.reduce(function(e,r){return u(e,r,t)},{})},t.exports=u},14047,e=>{"use strict";var t=Number.isNaN||function(e){return"number"==typeof e&&e!=e};function r(e,r){if(e.length!==r.length)return!1;for(var n,s,a=0;a<e.length;a++)if(!((n=e[a])===(s=r[a])||t(n)&&t(s))&&1)return!1;return!0}e.s(["default",0,function(e,t){void 0===t&&(t=r);var n,s,a=[],i=!1;return function(){for(var r=[],o=0;o<arguments.length;o++)r[o]=arguments[o];return i&&n===this&&t(r,a)||(s=e.apply(this,r),i=!0,n=this,a=r),s}}])},76873,(e,t,r)=>{var n="u">typeof Element,s="function"==typeof Map,a="function"==typeof Set,i="function"==typeof ArrayBuffer&&!!ArrayBuffer.isView;t.exports=function(e,t){try{return function e(t,r){if(t===r)return!0;if(t&&r&&"object"==typeof t&&"object"==typeof r){var o,l,u,c;if(t.constructor!==r.constructor)return!1;if(Array.isArray(t)){if((o=t.length)!=r.length)return!1;for(l=o;0!=l--;)if(!e(t[l],r[l]))return!1;return!0}if(s&&t instanceof Map&&r instanceof Map){if(t.size!==r.size)return!1;for(c=t.entries();!(l=c.next()).done;)if(!r.has(l.value[0]))return!1;for(c=t.entries();!(l=c.next()).done;)if(!e(l.value[1],r.get(l.value[0])))return!1;return!0}if(a&&t instanceof Set&&r instanceof Set){if(t.size!==r.size)return!1;for(c=t.entries();!(l=c.next()).done;)if(!r.has(l.value[0]))return!1;return!0}if(i&&ArrayBuffer.isView(t)&&ArrayBuffer.isView(r)){if((o=t.length)!=r.length)return!1;for(l=o;0!=l--;)if(t[l]!==r[l])return!1;return!0}if(t.constructor===RegExp)return t.source===r.source&&t.flags===r.flags;if(t.valueOf!==Object.prototype.valueOf&&"function"==typeof t.valueOf&&"function"==typeof r.valueOf)return t.valueOf()===r.valueOf();if(t.toString!==Object.prototype.toString&&"function"==typeof t.toString&&"function"==typeof r.toString)return t.toString()===r.toString();if((o=(u=Object.keys(t)).length)!==Object.keys(r).length)return!1;for(l=o;0!=l--;)if(!Object.prototype.hasOwnProperty.call(r,u[l]))return!1;if(n&&t instanceof Element)return!1;for(l=o;0!=l--;)if(("_owner"!==u[l]&&"__v"!==u[l]&&"__o"!==u[l]||!t.$$typeof)&&!e(t[u[l]],r[u[l]]))return!1;return!0}return t!=t&&r!=r}(e,t)}catch(e){if((e.message||"").match(/stack|recursion/i))return console.warn("react-fast-compare cannot handle circular refs"),!1;throw e}}},84485,(e,t,r)=>{"use strict";t.exports="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"},62376,(e,t,r)=>{"use strict";var n=e.r(84485);function s(){}function a(){}a.resetWarningCache=s,t.exports=function(){function e(e,t,r,s,a,i){if(i!==n){var o=Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw o.name="Invariant Violation",o}}function t(){return e}e.isRequired=e;var r={array:e,bigint:e,bool:e,func:e,number:e,object:e,string:e,symbol:e,any:e,arrayOf:t,element:e,elementType:e,instanceOf:t,node:e,objectOf:t,oneOf:t,oneOfType:t,shape:t,exact:t,checkPropTypes:a,resetWarningCache:s};return r.PropTypes=r,r}},59414,(e,t,r)=>{t.exports=e.r(62376)()},94346,(e,t,r)=>{let n,s,a;var i=Object.create,o=Object.defineProperty,l=Object.getOwnPropertyDescriptor,u=Object.getOwnPropertyNames,c=Object.getPrototypeOf,p=Object.prototype.hasOwnProperty,h=(e,t,r,n)=>{if(t&&"object"==typeof t||"function"==typeof t)for(let s of u(t))p.call(e,s)||s===r||o(e,s,{get:()=>t[s],enumerable:!(n=l(t,s))||n.enumerable});return e},d={},f={defaultProps:()=>j,propTypes:()=>k};for(var y in f)o(d,y,{get:f[y],enumerable:!0});t.exports=h(o({},"__esModule",{value:!0}),d);let{string:m,bool:b,number:g,array:v,oneOfType:w,shape:P,object:E,func:O,node:S}=(a=null!=(n=e.r(59414))?i(c(n)):{},h(!s&&n&&n.__esModule?a:o(a,"default",{value:n,enumerable:!0}),n)).default,k={url:w([m,v,E]),playing:b,loop:b,controls:b,volume:g,muted:b,playbackRate:g,width:w([m,g]),height:w([m,g]),style:E,progressInterval:g,playsinline:b,pip:b,stopOnUnmount:b,light:w([b,m,E]),playIcon:S,previewTabIndex:g,previewAriaLabel:m,fallback:S,oEmbedUrl:m,wrapper:w([m,O,P({render:O.isRequired})]),config:P({soundcloud:P({options:E}),youtube:P({playerVars:E,embedOptions:E,onUnstarted:O}),facebook:P({appId:m,version:m,playerId:m,attributes:E}),dailymotion:P({params:E}),vimeo:P({playerOptions:E,title:m}),mux:P({attributes:E,version:m}),file:P({attributes:E,tracks:v,forceVideo:b,forceAudio:b,forceHLS:b,forceSafariHLS:b,forceDisableHls:b,forceDASH:b,forceFLV:b,hlsOptions:E,hlsVersion:m,dashVersion:m,flvVersion:m}),wistia:P({options:E,playerId:m,customControls:v}),mixcloud:P({options:E}),twitch:P({options:E,playerId:m}),vidyard:P({options:E})}),onReady:O,onStart:O,onPlay:O,onPause:O,onBuffer:O,onBufferEnd:O,onEnded:O,onError:O,onDuration:O,onSeek:O,onPlaybackRateChange:O,onPlaybackQualityChange:O,onProgress:O,onClickPreview:O,onEnablePIP:O,onDisablePIP:O},x=()=>{},j={playing:!1,loop:!1,controls:!1,volume:null,muted:!1,playbackRate:1,width:"640px",height:"360px",style:{},progressInterval:1e3,playsinline:!1,pip:!1,stopOnUnmount:!0,light:!1,fallback:null,wrapper:"div",previewTabIndex:0,previewAriaLabel:"",oEmbedUrl:"https://noembed.com/embed?url={url}",config:{soundcloud:{options:{visual:!0,buying:!1,liking:!1,download:!1,sharing:!1,show_comments:!1,show_playcount:!1}},youtube:{playerVars:{playsinline:1,showinfo:0,rel:0,iv_load_policy:3,modestbranding:1},embedOptions:{},onUnstarted:x},facebook:{appId:"1309697205772819",version:"v3.3",playerId:null,attributes:{}},dailymotion:{params:{api:1,"endscreen-enable":!1}},vimeo:{playerOptions:{autopause:!1,byline:!1,portrait:!1,title:!1},title:null},mux:{attributes:{},version:"2"},file:{attributes:{},tracks:[],forceVideo:!1,forceAudio:!1,forceHLS:!1,forceDASH:!1,forceFLV:!1,hlsOptions:{},hlsVersion:"1.1.4",dashVersion:"3.1.3",flvVersion:"1.5.0",forceDisableHls:!1},wistia:{options:{},playerId:null,customControls:null},mixcloud:{options:{hide_cover:1}},twitch:{options:{},playerId:null},vidyard:{options:{}}},onReady:x,onStart:x,onPlay:x,onPause:x,onBuffer:x,onBufferEnd:x,onEnded:x,onError:x,onDuration:x,onSeek:x,onPlaybackRateChange:x,onPlaybackQualityChange:x,onProgress:x,onClickPreview:x,onEnablePIP:x,onDisablePIP:x}},45244,(e,t,r)=>{function n(e,t){e.onload=function(){this.onerror=this.onload=null,t(null,e)},e.onerror=function(){this.onerror=this.onload=null,t(Error("Failed to load "+this.src),e)}}t.exports=function(e,t,r){var s=document.head||document.getElementsByTagName("head")[0],a=document.createElement("script");"function"==typeof t&&(r=t,t={}),r=r||function(){},a.type=(t=t||{}).type||"text/javascript",a.charset=t.charset||"utf8",a.async=!("async"in t)||!!t.async,a.src=e,t.attrs&&function(e,t){for(var r in t)e.setAttribute(r,t[r])}(a,t.attrs),t.text&&(a.text=""+t.text),("onload"in a?n:function(e,t){e.onreadystatechange=function(){("complete"==this.readyState||"loaded"==this.readyState)&&(this.onreadystatechange=null,t(null,e))}})(a,r),a.onload||n(a,r),s.appendChild(a)}},2217,(e,t,r)=>{var n=Object.create,s=Object.defineProperty,a=Object.getOwnPropertyDescriptor,i=Object.getOwnPropertyNames,o=Object.getPrototypeOf,l=Object.prototype.hasOwnProperty,u=(e,t,r,n)=>{if(t&&"object"==typeof t||"function"==typeof t)for(let o of i(t))l.call(e,o)||o===r||s(e,o,{get:()=>t[o],enumerable:!(n=a(t,o))||n.enumerable});return e},c=(e,t,r)=>(r=null!=e?n(o(e)):{},u(!t&&e&&e.__esModule?r:s(r,"default",{value:e,enumerable:!0}),e)),p={},h={callPlayer:()=>C,getConfig:()=>R,getSDK:()=>L,isBlobUrl:()=>_,isMediaStream:()=>I,lazy:()=>b,omit:()=>T,parseEndTime:()=>S,parseStartTime:()=>O,queryString:()=>x,randomString:()=>k,supportsWebKitPresentationMode:()=>A};for(var d in h)s(p,d,{get:h[d],enumerable:!0});t.exports=u(s({},"__esModule",{value:!0}),p);var f=c(e.r(53014)),y=c(e.r(45244)),m=c(e.r(38158));let b=e=>f.default.lazy(async()=>{let t=await e();return"function"==typeof t.default?t:t.default}),g=/[?&#](?:start|t)=([0-9hms]+)/,v=/[?&#]end=([0-9hms]+)/,w=/(\d+)(h|m|s)/g,P=/^\d+$/;function E(e,t){if(e instanceof Array)return;let r=e.match(t);if(r){let e=r[1];if(e.match(w)){var n=e;let t=0,r=w.exec(n);for(;null!==r;){let[,e,s]=r;"h"===s&&(t+=60*parseInt(e,10)*60),"m"===s&&(t+=60*parseInt(e,10)),"s"===s&&(t+=parseInt(e,10)),r=w.exec(n)}return t}if(P.test(e))return parseInt(e)}}function O(e){return E(e,g)}function S(e){return E(e,v)}function k(){return Math.random().toString(36).substr(2,5)}function x(e){return Object.keys(e).map(t=>`${t}=${e[t]}`).join("&")}function j(e){return window[e]?window[e]:window.exports&&window.exports[e]?window.exports[e]:window.module&&window.module.exports&&window.module.exports[e]?window.module.exports[e]:null}let M={},L=function(e,t,r=null,n=()=>!0,s=y.default){let a=j(t);return a&&n(a)?Promise.resolve(a):new Promise((n,a)=>{if(M[e])return void M[e].push({resolve:n,reject:a});M[e]=[{resolve:n,reject:a}];let i=t=>{M[e].forEach(e=>e.resolve(t))};if(r){let e=window[r];window[r]=function(){e&&e(),i(j(t))}}s(e,n=>{n?(M[e].forEach(e=>e.reject(n)),M[e]=null):r||i(j(t))})})};function R(e,t){return(0,m.default)(t.config,e.config)}function T(e,...t){let r=[].concat(...t),n={};for(let t of Object.keys(e))-1===r.indexOf(t)&&(n[t]=e[t]);return n}function C(e,...t){if(!this.player||!this.player[e]){let t=`ReactPlayer: ${this.constructor.displayName} player could not call %c${e}%c \u2013 `;return this.player?this.player[e]||(t+="The method was not available"):t+="The player was not available",console.warn(t,"font-weight: bold",""),null}return this.player[e](...t)}function I(e){return"u">typeof window&&void 0!==window.MediaStream&&e instanceof window.MediaStream}function _(e){return/^blob:/.test(e)}function A(e=document.createElement("video")){let t=!1===/iPhone|iPod/.test(navigator.userAgent);return e.webkitSupportsPresentationMode&&"function"==typeof e.webkitSetPresentationMode&&t}},63760,(e,t,r)=>{var n=Object.create,s=Object.defineProperty,a=Object.getOwnPropertyDescriptor,i=Object.getOwnPropertyNames,o=Object.getPrototypeOf,l=Object.prototype.hasOwnProperty,u=(e,t,r,n)=>{if(t&&"object"==typeof t||"function"==typeof t)for(let o of i(t))l.call(e,o)||o===r||s(e,o,{get:()=>t[o],enumerable:!(n=a(t,o))||n.enumerable});return e},c=(e,t,r)=>(r=null!=e?n(o(e)):{},u(!t&&e&&e.__esModule?r:s(r,"default",{value:e,enumerable:!0}),e)),p=(e,t,r)=>{let n;return(n="symbol"!=typeof t?t+"":t)in e?s(e,n,{enumerable:!0,configurable:!0,writable:!0,value:r}):e[n]=r,r},h={},d={default:()=>v};for(var f in d)s(h,f,{get:d[f],enumerable:!0});t.exports=u(s({},"__esModule",{value:!0}),h);var y=c(e.r(53014)),m=c(e.r(76873)),b=e.r(94346),g=e.r(2217);class v extends y.Component{constructor(){super(...arguments),p(this,"mounted",!1),p(this,"isReady",!1),p(this,"isPlaying",!1),p(this,"isLoading",!0),p(this,"loadOnReady",null),p(this,"startOnPlay",!0),p(this,"seekOnPlay",null),p(this,"onDurationCalled",!1),p(this,"handlePlayerMount",e=>{this.player||(this.player=e,this.player.load(this.props.url)),this.progress()}),p(this,"getInternalPlayer",e=>this.player?this.player[e]:null),p(this,"progress",()=>{if(this.props.url&&this.player&&this.isReady){let e=this.getCurrentTime()||0,t=this.getSecondsLoaded(),r=this.getDuration();if(r){let n={playedSeconds:e,played:e/r};null!==t&&(n.loadedSeconds=t,n.loaded=t/r),(n.playedSeconds!==this.prevPlayed||n.loadedSeconds!==this.prevLoaded)&&this.props.onProgress(n),this.prevPlayed=n.playedSeconds,this.prevLoaded=n.loadedSeconds}}this.progressTimeout=setTimeout(this.progress,this.props.progressFrequency||this.props.progressInterval)}),p(this,"handleReady",()=>{if(!this.mounted)return;this.isReady=!0,this.isLoading=!1;let{onReady:e,playing:t,volume:r,muted:n}=this.props;e(),n||null===r||this.player.setVolume(r),this.loadOnReady?(this.player.load(this.loadOnReady,!0),this.loadOnReady=null):t&&this.player.play(),this.handleDurationCheck()}),p(this,"handlePlay",()=>{this.isPlaying=!0,this.isLoading=!1;let{onStart:e,onPlay:t,playbackRate:r}=this.props;this.startOnPlay&&(this.player.setPlaybackRate&&1!==r&&this.player.setPlaybackRate(r),e(),this.startOnPlay=!1),t(),this.seekOnPlay&&(this.seekTo(this.seekOnPlay),this.seekOnPlay=null),this.handleDurationCheck()}),p(this,"handlePause",e=>{this.isPlaying=!1,this.isLoading||this.props.onPause(e)}),p(this,"handleEnded",()=>{let{activePlayer:e,loop:t,onEnded:r}=this.props;e.loopOnEnded&&t&&this.seekTo(0),t||(this.isPlaying=!1,r())}),p(this,"handleError",(...e)=>{this.isLoading=!1,this.props.onError(...e)}),p(this,"handleDurationCheck",()=>{clearTimeout(this.durationCheckTimeout);let e=this.getDuration();e?this.onDurationCalled||(this.props.onDuration(e),this.onDurationCalled=!0):this.durationCheckTimeout=setTimeout(this.handleDurationCheck,100)}),p(this,"handleLoaded",()=>{this.isLoading=!1})}componentDidMount(){this.mounted=!0}componentWillUnmount(){clearTimeout(this.progressTimeout),clearTimeout(this.durationCheckTimeout),this.isReady&&this.props.stopOnUnmount&&(this.player.stop(),this.player.disablePIP&&this.player.disablePIP()),this.mounted=!1}componentDidUpdate(e){if(!this.player)return;let{url:t,playing:r,volume:n,muted:s,playbackRate:a,pip:i,loop:o,activePlayer:l,disableDeferredLoading:u}=this.props;if(!(0,m.default)(e.url,t)){if(this.isLoading&&!l.forceLoad&&!u&&!(0,g.isMediaStream)(t)){console.warn(`ReactPlayer: the attempt to load ${t} is being deferred until the player has loaded`),this.loadOnReady=t;return}this.isLoading=!0,this.startOnPlay=!0,this.onDurationCalled=!1,this.player.load(t,this.isReady)}e.playing||!r||this.isPlaying||this.player.play(),e.playing&&!r&&this.isPlaying&&this.player.pause(),!e.pip&&i&&this.player.enablePIP&&this.player.enablePIP(),e.pip&&!i&&this.player.disablePIP&&this.player.disablePIP(),e.volume!==n&&null!==n&&this.player.setVolume(n),e.muted!==s&&(s?this.player.mute():(this.player.unmute(),null!==n&&setTimeout(()=>this.player.setVolume(n)))),e.playbackRate!==a&&this.player.setPlaybackRate&&this.player.setPlaybackRate(a),e.loop!==o&&this.player.setLoop&&this.player.setLoop(o)}getDuration(){return this.isReady?this.player.getDuration():null}getCurrentTime(){return this.isReady?this.player.getCurrentTime():null}getSecondsLoaded(){return this.isReady?this.player.getSecondsLoaded():null}seekTo(e,t,r){if(!this.isReady){0!==e&&(this.seekOnPlay=e,setTimeout(()=>{this.seekOnPlay=null},5e3));return}if(t?"fraction"===t:e>0&&e<1){let t=this.player.getDuration();return t?void this.player.seekTo(t*e,r):void console.warn("ReactPlayer: could not seek using fraction – duration not yet available")}this.player.seekTo(e,r)}render(){let e=this.props.activePlayer;return e?y.default.createElement(e,{...this.props,onMount:this.handlePlayerMount,onReady:this.handleReady,onPlay:this.handlePlay,onPause:this.handlePause,onEnded:this.handleEnded,onLoaded:this.handleLoaded,onError:this.handleError}):null}}p(v,"displayName","Player"),p(v,"propTypes",b.propTypes),p(v,"defaultProps",b.defaultProps)},62119,(e,t,r)=>{var n=Object.create,s=Object.defineProperty,a=Object.getOwnPropertyDescriptor,i=Object.getOwnPropertyNames,o=Object.getPrototypeOf,l=Object.prototype.hasOwnProperty,u=(e,t,r,n)=>{if(t&&"object"==typeof t||"function"==typeof t)for(let o of i(t))l.call(e,o)||o===r||s(e,o,{get:()=>t[o],enumerable:!(n=a(t,o))||n.enumerable});return e},c=(e,t,r)=>(r=null!=e?n(o(e)):{},u(!t&&e&&e.__esModule?r:s(r,"default",{value:e,enumerable:!0}),e)),p=(e,t,r)=>{let n;return(n="symbol"!=typeof t?t+"":t)in e?s(e,n,{enumerable:!0,configurable:!0,writable:!0,value:r}):e[n]=r,r},h={},d={createReactPlayer:()=>M};for(var f in d)s(h,f,{get:d[f],enumerable:!0});t.exports=u(s({},"__esModule",{value:!0}),h);var y=c(e.r(53014)),m=c(e.r(38158)),b=c(e.r(14047)),g=c(e.r(76873)),v=e.r(94346),w=e.r(2217),P=c(e.r(63760));let E=(0,w.lazy)(()=>e.A(16808)),O="u">typeof window&&window.document&&"u">typeof document,S=e.g.window&&e.g.window.document,k=Object.keys(v.propTypes),x=O||S?y.Suspense:()=>null,j=[],M=(e,t)=>{var r;return r=class extends y.Component{constructor(){super(...arguments),p(this,"state",{showPreview:!!this.props.light}),p(this,"references",{wrapper:e=>{this.wrapper=e},player:e=>{this.player=e}}),p(this,"handleClickPreview",e=>{this.setState({showPreview:!1}),this.props.onClickPreview(e)}),p(this,"showPreview",()=>{this.setState({showPreview:!0})}),p(this,"getDuration",()=>this.player?this.player.getDuration():null),p(this,"getCurrentTime",()=>this.player?this.player.getCurrentTime():null),p(this,"getSecondsLoaded",()=>this.player?this.player.getSecondsLoaded():null),p(this,"getInternalPlayer",(e="player")=>this.player?this.player.getInternalPlayer(e):null),p(this,"seekTo",(e,t,r)=>{if(!this.player)return null;this.player.seekTo(e,t,r)}),p(this,"handleReady",()=>{this.props.onReady(this)}),p(this,"getActivePlayer",(0,b.default)(r=>{for(let t of[...j,...e])if(t.canPlay(r))return t;return t||null})),p(this,"getConfig",(0,b.default)((e,t)=>{let{config:r}=this.props;return m.default.all([v.defaultProps.config,v.defaultProps.config[t]||{},r,r[t]||{}])})),p(this,"getAttributes",(0,b.default)(e=>(0,w.omit)(this.props,k))),p(this,"renderActivePlayer",e=>{if(!e)return null;let t=this.getActivePlayer(e);if(!t)return null;let r=this.getConfig(e,t.key);return y.default.createElement(P.default,{...this.props,key:t.key,ref:this.references.player,config:r,activePlayer:t.lazyPlayer||t,onReady:this.handleReady})})}shouldComponentUpdate(e,t){return!(0,g.default)(this.props,e)||!(0,g.default)(this.state,t)}componentDidUpdate(e){let{light:t}=this.props;!e.light&&t&&this.setState({showPreview:!0}),e.light&&!t&&this.setState({showPreview:!1})}renderPreview(e){if(!e)return null;let{light:t,playIcon:r,previewTabIndex:n,oEmbedUrl:s,previewAriaLabel:a}=this.props;return y.default.createElement(E,{url:e,light:t,playIcon:r,previewTabIndex:n,previewAriaLabel:a,oEmbedUrl:s,onClick:this.handleClickPreview})}render(){let{url:e,style:t,width:r,height:n,fallback:s,wrapper:a}=this.props,{showPreview:i}=this.state,o=this.getAttributes(e),l="string"==typeof a?this.references.wrapper:void 0;return y.default.createElement(a,{ref:l,style:{...t,width:r,height:n},...o},y.default.createElement(x,{fallback:s},i?this.renderPreview(e):this.renderActivePlayer(e)))}},p(r,"displayName","ReactPlayer"),p(r,"propTypes",v.propTypes),p(r,"defaultProps",v.defaultProps),p(r,"addCustomPlayer",e=>{j.push(e)}),p(r,"removeCustomPlayers",()=>{j.length=0}),p(r,"canPlay",t=>{for(let r of[...j,...e])if(r.canPlay(t))return!0;return!1}),p(r,"canEnablePIP",t=>{for(let r of[...j,...e])if(r.canEnablePIP&&r.canEnablePIP(t))return!0;return!1}),r}},7230,(e,t,r)=>{var n=Object.defineProperty,s=Object.getOwnPropertyDescriptor,a=Object.getOwnPropertyNames,i=Object.prototype.hasOwnProperty,o={},l={AUDIO_EXTENSIONS:()=>k,DASH_EXTENSIONS:()=>M,FLV_EXTENSIONS:()=>L,HLS_EXTENSIONS:()=>j,MATCH_URL_DAILYMOTION:()=>P,MATCH_URL_FACEBOOK:()=>y,MATCH_URL_FACEBOOK_WATCH:()=>m,MATCH_URL_KALTURA:()=>S,MATCH_URL_MIXCLOUD:()=>E,MATCH_URL_MUX:()=>f,MATCH_URL_SOUNDCLOUD:()=>h,MATCH_URL_STREAMABLE:()=>b,MATCH_URL_TWITCH_CHANNEL:()=>w,MATCH_URL_TWITCH_VIDEO:()=>v,MATCH_URL_VIDYARD:()=>O,MATCH_URL_VIMEO:()=>d,MATCH_URL_WISTIA:()=>g,MATCH_URL_YOUTUBE:()=>p,VIDEO_EXTENSIONS:()=>x,canPlay:()=>T};for(var u in l)n(o,u,{get:l[u],enumerable:!0});t.exports=((e,t,r,o)=>{if(t&&"object"==typeof t||"function"==typeof t)for(let l of a(t))i.call(e,l)||l===r||n(e,l,{get:()=>t[l],enumerable:!(o=s(t,l))||o.enumerable});return e})(n({},"__esModule",{value:!0}),o);var c=e.r(2217);let p=/(?:youtu\.be\/|youtube(?:-nocookie|education)?\.com\/(?:embed\/|v\/|watch\/|watch\?v=|watch\?.+&v=|shorts\/|live\/))((\w|-){11})|youtube\.com\/playlist\?list=|youtube\.com\/user\//,h=/(?:soundcloud\.com|snd\.sc)\/[^.]+$/,d=/vimeo\.com\/(?!progressive_redirect).+/,f=/stream\.mux\.com\/(?!\w+\.m3u8)(\w+)/,y=/^https?:\/\/(www\.)?facebook\.com.*\/(video(s)?|watch|story)(\.php?|\/).+$/,m=/^https?:\/\/fb\.watch\/.+$/,b=/streamable\.com\/([a-z0-9]+)$/,g=/(?:wistia\.(?:com|net)|wi\.st)\/(?:medias|embed)\/(?:iframe\/)?([^?]+)/,v=/(?:www\.|go\.)?twitch\.tv\/videos\/(\d+)($|\?)/,w=/(?:www\.|go\.)?twitch\.tv\/([a-zA-Z0-9_]+)($|\?)/,P=/^(?:(?:https?):)?(?:\/\/)?(?:www\.)?(?:(?:dailymotion\.com(?:\/embed)?\/video)|dai\.ly)\/([a-zA-Z0-9]+)(?:_[\w_-]+)?(?:[\w.#_-]+)?/,E=/mixcloud\.com\/([^/]+\/[^/]+)/,O=/vidyard.com\/(?:watch\/)?([a-zA-Z0-9-_]+)/,S=/^https?:\/\/[a-zA-Z]+\.kaltura.(com|org)\/p\/([0-9]+)\/sp\/([0-9]+)00\/embedIframeJs\/uiconf_id\/([0-9]+)\/partner_id\/([0-9]+)(.*)entry_id.([a-zA-Z0-9-_].*)$/,k=/\.(m4a|m4b|mp4a|mpga|mp2|mp2a|mp3|m2a|m3a|wav|weba|aac|oga|spx)($|\?)/i,x=/\.(mp4|og[gv]|webm|mov|m4v)(#t=[,\d+]+)?($|\?)/i,j=/\.(m3u8)($|\?)/i,M=/\.(mpd)($|\?)/i,L=/\.(flv)($|\?)/i,R=e=>{if(e instanceof Array){for(let t of e)if("string"==typeof t&&R(t)||R(t.src))return!0;return!1}return!!((0,c.isMediaStream)(e)||(0,c.isBlobUrl)(e))||k.test(e)||x.test(e)||j.test(e)||M.test(e)||L.test(e)},T={youtube:e=>e instanceof Array?e.every(e=>p.test(e)):p.test(e),soundcloud:e=>h.test(e)&&!k.test(e),vimeo:e=>d.test(e)&&!x.test(e)&&!j.test(e),mux:e=>f.test(e),facebook:e=>y.test(e)||m.test(e),streamable:e=>b.test(e),wistia:e=>g.test(e),twitch:e=>v.test(e)||w.test(e),dailymotion:e=>P.test(e),mixcloud:e=>E.test(e),vidyard:e=>O.test(e),kaltura:e=>S.test(e),file:R}},58293,(e,t,r)=>{let n,s,a;var i=Object.create,o=Object.defineProperty,l=Object.getOwnPropertyDescriptor,u=Object.getOwnPropertyNames,c=Object.getPrototypeOf,p=Object.prototype.hasOwnProperty,h=(e,t,r,n)=>{if(t&&"object"==typeof t||"function"==typeof t)for(let s of u(t))p.call(e,s)||s===r||o(e,s,{get:()=>t[s],enumerable:!(n=l(t,s))||n.enumerable});return e},d=(e,t,r)=>{let n;return(n="symbol"!=typeof t?t+"":t)in e?o(e,n,{enumerable:!0,configurable:!0,writable:!0,value:r}):e[n]=r,r},f={},y={default:()=>x};for(var m in y)o(f,m,{get:y[m],enumerable:!0});t.exports=h(o({},"__esModule",{value:!0}),f);var b=(a=null!=(n=e.r(53014))?i(c(n)):{},h(!s&&n&&n.__esModule?a:o(a,"default",{value:n,enumerable:!0}),n)),g=e.r(2217),v=e.r(7230);let w="u">typeof navigator,P=w&&"MacIntel"===navigator.platform&&navigator.maxTouchPoints>1,E=w&&(/iPad|iPhone|iPod/.test(navigator.userAgent)||P)&&!window.MSStream,O=w&&/^((?!chrome|android).)*safari/i.test(navigator.userAgent)&&!window.MSStream,S=/www\.dropbox\.com\/.+/,k=/https:\/\/watch\.cloudflarestream\.com\/([a-z0-9]+)/;class x extends b.Component{constructor(){super(...arguments),d(this,"onReady",(...e)=>this.props.onReady(...e)),d(this,"onPlay",(...e)=>this.props.onPlay(...e)),d(this,"onBuffer",(...e)=>this.props.onBuffer(...e)),d(this,"onBufferEnd",(...e)=>this.props.onBufferEnd(...e)),d(this,"onPause",(...e)=>this.props.onPause(...e)),d(this,"onEnded",(...e)=>this.props.onEnded(...e)),d(this,"onError",(...e)=>this.props.onError(...e)),d(this,"onPlayBackRateChange",e=>this.props.onPlaybackRateChange(e.target.playbackRate)),d(this,"onEnablePIP",(...e)=>this.props.onEnablePIP(...e)),d(this,"onDisablePIP",e=>{let{onDisablePIP:t,playing:r}=this.props;t(e),r&&this.play()}),d(this,"onPresentationModeChange",e=>{if(this.player&&(0,g.supportsWebKitPresentationMode)(this.player)){let{webkitPresentationMode:t}=this.player;"picture-in-picture"===t?this.onEnablePIP(e):"inline"===t&&this.onDisablePIP(e)}}),d(this,"onSeek",e=>{this.props.onSeek(e.target.currentTime)}),d(this,"mute",()=>{this.player.muted=!0}),d(this,"unmute",()=>{this.player.muted=!1}),d(this,"renderSourceElement",(e,t)=>"string"==typeof e?b.default.createElement("source",{key:t,src:e}):b.default.createElement("source",{key:t,...e})),d(this,"renderTrack",(e,t)=>b.default.createElement("track",{key:t,...e})),d(this,"ref",e=>{this.player&&(this.prevPlayer=this.player),this.player=e})}componentDidMount(){this.props.onMount&&this.props.onMount(this),this.addListeners(this.player);let e=this.getSource(this.props.url);e&&(this.player.src=e),(E||this.props.config.forceDisableHls)&&this.player.load()}componentDidUpdate(e){this.shouldUseAudio(this.props)!==this.shouldUseAudio(e)&&(this.removeListeners(this.prevPlayer,e.url),this.addListeners(this.player)),this.props.url===e.url||(0,g.isMediaStream)(this.props.url)||this.props.url instanceof Array||(this.player.srcObject=null)}componentWillUnmount(){this.player.removeAttribute("src"),this.removeListeners(this.player),this.hls&&this.hls.destroy()}addListeners(e){let{url:t,playsinline:r}=this.props;e.addEventListener("play",this.onPlay),e.addEventListener("waiting",this.onBuffer),e.addEventListener("playing",this.onBufferEnd),e.addEventListener("pause",this.onPause),e.addEventListener("seeked",this.onSeek),e.addEventListener("ended",this.onEnded),e.addEventListener("error",this.onError),e.addEventListener("ratechange",this.onPlayBackRateChange),e.addEventListener("enterpictureinpicture",this.onEnablePIP),e.addEventListener("leavepictureinpicture",this.onDisablePIP),e.addEventListener("webkitpresentationmodechanged",this.onPresentationModeChange),this.shouldUseHLS(t)||e.addEventListener("canplay",this.onReady),r&&(e.setAttribute("playsinline",""),e.setAttribute("webkit-playsinline",""),e.setAttribute("x5-playsinline",""))}removeListeners(e,t){e.removeEventListener("canplay",this.onReady),e.removeEventListener("play",this.onPlay),e.removeEventListener("waiting",this.onBuffer),e.removeEventListener("playing",this.onBufferEnd),e.removeEventListener("pause",this.onPause),e.removeEventListener("seeked",this.onSeek),e.removeEventListener("ended",this.onEnded),e.removeEventListener("error",this.onError),e.removeEventListener("ratechange",this.onPlayBackRateChange),e.removeEventListener("enterpictureinpicture",this.onEnablePIP),e.removeEventListener("leavepictureinpicture",this.onDisablePIP),e.removeEventListener("webkitpresentationmodechanged",this.onPresentationModeChange),this.shouldUseHLS(t)||e.removeEventListener("canplay",this.onReady)}shouldUseAudio(e){return!e.config.forceVideo&&!e.config.attributes.poster&&(v.AUDIO_EXTENSIONS.test(e.url)||e.config.forceAudio)}shouldUseHLS(e){return!!O&&!!this.props.config.forceSafariHLS||!!this.props.config.forceHLS||!E&&!this.props.config.forceDisableHls&&(v.HLS_EXTENSIONS.test(e)||k.test(e))}shouldUseDASH(e){return v.DASH_EXTENSIONS.test(e)||this.props.config.forceDASH}shouldUseFLV(e){return v.FLV_EXTENSIONS.test(e)||this.props.config.forceFLV}load(e){let{hlsVersion:t,hlsOptions:r,dashVersion:n,flvVersion:s}=this.props.config;if(this.hls&&this.hls.destroy(),this.dash&&this.dash.reset(),this.shouldUseHLS(e)&&(0,g.getSDK)("https://cdn.jsdelivr.net/npm/hls.js@VERSION/dist/hls.min.js".replace("VERSION",t),"Hls").then(t=>{if(this.hls=new t(r),this.hls.on(t.Events.MANIFEST_PARSED,()=>{this.props.onReady()}),this.hls.on(t.Events.ERROR,(e,r)=>{this.props.onError(e,r,this.hls,t)}),k.test(e)){let t=e.match(k)[1];this.hls.loadSource("https://videodelivery.net/{id}/manifest/video.m3u8".replace("{id}",t))}else this.hls.loadSource(e);this.hls.attachMedia(this.player),this.props.onLoaded()}),this.shouldUseDASH(e)&&(0,g.getSDK)("https://cdnjs.cloudflare.com/ajax/libs/dashjs/VERSION/dash.all.min.js".replace("VERSION",n),"dashjs").then(t=>{this.dash=t.MediaPlayer().create(),this.dash.initialize(this.player,e,this.props.playing),this.dash.on("error",this.props.onError),3>parseInt(n)?this.dash.getDebug().setLogToBrowserConsole(!1):this.dash.updateSettings({debug:{logLevel:t.Debug.LOG_LEVEL_NONE}}),this.props.onLoaded()}),this.shouldUseFLV(e)&&(0,g.getSDK)("https://cdn.jsdelivr.net/npm/flv.js@VERSION/dist/flv.min.js".replace("VERSION",s),"flvjs").then(t=>{this.flv=t.createPlayer({type:"flv",url:e}),this.flv.attachMediaElement(this.player),this.flv.on(t.Events.ERROR,(e,r)=>{this.props.onError(e,r,this.flv,t)}),this.flv.load(),this.props.onLoaded()}),e instanceof Array)this.player.load();else if((0,g.isMediaStream)(e))try{this.player.srcObject=e}catch(t){this.player.src=window.URL.createObjectURL(e)}}play(){let e=this.player.play();e&&e.catch(this.props.onError)}pause(){this.player.pause()}stop(){this.player.removeAttribute("src"),this.dash&&this.dash.reset()}seekTo(e,t=!0){this.player.currentTime=e,t||this.pause()}setVolume(e){this.player.volume=e}enablePIP(){this.player.requestPictureInPicture&&document.pictureInPictureElement!==this.player?this.player.requestPictureInPicture():(0,g.supportsWebKitPresentationMode)(this.player)&&"picture-in-picture"!==this.player.webkitPresentationMode&&this.player.webkitSetPresentationMode("picture-in-picture")}disablePIP(){document.exitPictureInPicture&&document.pictureInPictureElement===this.player?document.exitPictureInPicture():(0,g.supportsWebKitPresentationMode)(this.player)&&"inline"!==this.player.webkitPresentationMode&&this.player.webkitSetPresentationMode("inline")}setPlaybackRate(e){try{this.player.playbackRate=e}catch(e){this.props.onError(e)}}getDuration(){if(!this.player)return null;let{duration:e,seekable:t}=this.player;return e===1/0&&t.length>0?t.end(t.length-1):e}getCurrentTime(){return this.player?this.player.currentTime:null}getSecondsLoaded(){if(!this.player)return null;let{buffered:e}=this.player;if(0===e.length)return 0;let t=e.end(e.length-1),r=this.getDuration();return t>r?r:t}getSource(e){let t=this.shouldUseHLS(e),r=this.shouldUseDASH(e),n=this.shouldUseFLV(e);if(!(e instanceof Array||(0,g.isMediaStream)(e))&&!t&&!r&&!n)return S.test(e)?e.replace("www.dropbox.com","dl.dropboxusercontent.com"):e}render(){let{url:e,playing:t,loop:r,controls:n,muted:s,config:a,width:i,height:o}=this.props,l=this.shouldUseAudio(this.props);return b.default.createElement(l?"audio":"video",{ref:this.ref,src:this.getSource(e),style:{width:"auto"===i?i:"100%",height:"auto"===o?o:"100%"},preload:"auto",autoPlay:t||void 0,controls:n,muted:s,loop:r,...a.attributes},e instanceof Array&&e.map(this.renderSourceElement),a.tracks.map(this.renderTrack))}}d(x,"displayName","FilePlayer"),d(x,"canPlay",v.canPlay.file)},10618,(e,t,r)=>{var n=e.r(62119).createReactPlayer,s=e.r(58293).default;t.exports=n([{key:"file",canPlay:s.canPlay,lazyPlayer:s}])},35628,e=>{"use strict";var t,r,n,s,a,i,o,l=e.i(71448),u=e.i(53014),c=e.i(10618),p=e.i(73533);let h=[["requestFullscreen","exitFullscreen","fullscreenElement","fullscreenEnabled","fullscreenchange","fullscreenerror"],["webkitRequestFullscreen","webkitExitFullscreen","webkitFullscreenElement","webkitFullscreenEnabled","webkitfullscreenchange","webkitfullscreenerror"],["webkitRequestFullScreen","webkitCancelFullScreen","webkitCurrentFullScreenElement","webkitCancelFullScreen","webkitfullscreenchange","webkitfullscreenerror"],["mozRequestFullScreen","mozCancelFullScreen","mozFullScreenElement","mozFullScreenEnabled","mozfullscreenchange","mozfullscreenerror"],["msRequestFullscreen","msExitFullscreen","msFullscreenElement","msFullscreenEnabled","MSFullscreenChange","MSFullscreenError"]],d=(()=>{if("u"<typeof document)return!1;let e=h[0],t={};for(let r of h)if(r?.[1]in document){for(let[n,s]of r.entries())t[e[n]]=s;return t}return!1})(),f={change:d.fullscreenchange,error:d.fullscreenerror},y={request:(e=document.documentElement,t)=>new Promise((r,n)=>{let s=()=>{y.off("change",s),r()};y.on("change",s);let a=e[d.requestFullscreen](t);a instanceof Promise&&a.then(s).catch(n)}),exit:()=>new Promise((e,t)=>{if(!y.isFullscreen)return void e();let r=()=>{y.off("change",r),e()};y.on("change",r);let n=document[d.exitFullscreen]();n instanceof Promise&&n.then(r).catch(t)}),toggle:(e,t)=>y.isFullscreen?y.exit():y.request(e,t),onchange(e){y.on("change",e)},onerror(e){y.on("error",e)},on(e,t){let r=f[e];r&&document.addEventListener(r,t,!1)},off(e,t){let r=f[e];r&&document.removeEventListener(r,t,!1)},raw:d};Object.defineProperties(y,{isFullscreen:{get:()=>!!document[d.fullscreenElement]},element:{enumerable:!0,get:()=>document[d.fullscreenElement]??void 0},isEnabled:{enumerable:!0,get:()=>!!document[d.fullscreenEnabled]}}),d||(y={isEnabled:!1});let m=y;var b=e.i(7953),g=e.i(57739),v=e.i(21375);function w(){return(w=Object.assign.bind()).apply(null,arguments)}let P=e=>u.createElement("svg",w({xmlns:"http://www.w3.org/2000/svg",width:8,height:8,fill:"none",viewBox:"0 0 8 8"},e),t||(t=u.createElement("path",{fill:"currentColor",stroke:"currentColor",strokeMiterlimit:10,d:"M1.906 1.116v5.768L6.233 4z"})));function E(){return(E=Object.assign.bind()).apply(null,arguments)}let O=e=>u.createElement("svg",E({xmlns:"http://www.w3.org/2000/svg",width:24,height:24,fill:"none",viewBox:"0 0 24 24"},e),r||(r=u.createElement("path",{stroke:"currentColor",strokeWidth:3,d:"M7.5 4v16M16.5 4v16"})));function S(){return(S=Object.assign.bind()).apply(null,arguments)}let k=e=>u.createElement("svg",S({xmlns:"http://www.w3.org/2000/svg",width:24,height:24,fill:"none",viewBox:"0 0 24 24"},e),n||(n=u.createElement("path",{fill:"#fff",d:"M2.462 7.808v-.721h-.72v.72zm4.846 0v.721h.252l.197-.156zm6.695-5.315h.72V1l-1.169.929zm0 18.323-.449.565 1.17.928v-1.493zM7.308 15.5l.448-.565-.197-.156h-.251zm-4.846 0h-.72v.722h.72zm.722-3.846V7.808H1.74v3.847zm-.722-3.126h4.846V7.087H2.462zm5.295-.156 6.694-5.315-.897-1.13L6.86 7.244zm5.524-5.88v18.323h1.443V2.493zm1.17 17.758-6.695-5.315-.896 1.13 6.694 5.315zm-7.143-5.47H2.462v1.442h4.846zm-4.124.72v-3.846H1.74V15.5z"})));function x(){return(x=Object.assign.bind()).apply(null,arguments)}let j=e=>u.createElement("svg",x({xmlns:"http://www.w3.org/2000/svg",width:24,height:24,fill:"none",viewBox:"0 0 24 24"},e),s||(s=u.createElement("path",{fill:"#fff",d:"M2.463 7.808v-.721h-.72v.72zm4.846 0v.721h.252l.197-.156zm6.695-5.315h.72V1l-1.169.929zm0 18.323-.449.565 1.17.928v-1.493zM7.309 15.5l.448-.565-.197-.156H7.31zm-4.846 0h-.72v.722h.72zm.722-3.846V7.808H1.742v3.847zm-.722-3.126H7.31V7.087H2.463zm5.295-.156 6.694-5.315-.897-1.13-6.694 5.315zm5.524-5.88v18.323h1.443V2.493zm1.17 17.758-6.695-5.315-.896 1.13 6.694 5.315zm-7.143-5.47H2.463v1.442H7.31zm-4.124.72v-3.846H1.742V15.5z"})),a||(a=u.createElement("path",{stroke:"#fff",strokeWidth:1.923,d:"M17.848 7.808v7.694M21.695 5.885v11.54"})));function M(){return(M=Object.assign.bind()).apply(null,arguments)}let L=e=>u.createElement("svg",M({xmlns:"http://www.w3.org/2000/svg",width:24,height:24,fill:"none",viewBox:"0 0 24 24"},e),i||(i=u.createElement("path",{stroke:"#fff",strokeWidth:1.6,d:"M8.5 21.5v-6h-6M15.5 21.5v-6h6M8.5 2.5v6h-6M15.5 2.5v6h6"})));function R(){return(R=Object.assign.bind()).apply(null,arguments)}let T=e=>u.createElement("svg",R({xmlns:"http://www.w3.org/2000/svg",width:24,height:24,fill:"none",viewBox:"0 0 24 24"},e),o||(o=u.createElement("path",{stroke:"#fff",strokeWidth:1.6,d:"M8.5 21.5v-6h-6M15.5 21.5v-6h6M8.5 2.5v6h-6M15.5 2.5v6h6"})));var C=e.i(92238),I=e.i(70733);let _=e=>(0,l.jsxs)("div",{className:"relative w-full h-20 my-10 overflow-hidden",children:[(0,l.jsx)("input",{...e,onTouchStart:e.onMouseDown,onTouchEnd:e.onMouseUp,className:"absolute z-1 inset-0 appearance-none outline-0 bg-transparent border-0 p-0 m-0 select-none cursor-pointer [&::-webkit-slider-thumb]:opacity-0",type:"range",min:0,max:.999999,step:"any","aria-label":"Video timeline controller"}),(0,l.jsxs)("div",{className:"absolute z-0 top-1/2 left-0 w-full h-2 -mt-1 overflow-hidden before:block before:w-full before:h-full before:bg-current before:opacity-30",children:[(0,l.jsx)("div",{className:"absolute bg-current w-full top-0 right-full h-full","aria-label":"Progress","aria-hidden":!0,style:{transform:`translateX(${100*e.value}%) translateZ(0)`}}),(0,l.jsx)("div",{className:"absolute bg-current opacity-30 w-full top-0 right-full h-full transition-transform","aria-label":"Buffer","aria-hidden":!0,style:{transform:`translateX(${100*e.loaded}%) translateZ(0)`}})]})]}),A=e=>(0,l.jsxs)("div",{className:(0,I.default)("relative w-54 h-15 overflow-hidden",e.className),children:[(0,l.jsx)("input",{...e,className:"absolute z-1 inset-0 appearance-none outline-0 bg-transparent border-0 p-0 m-0 select-none cursor-pointer [&::-webkit-slider-thumb]:opacity-0",type:"range",min:0,max:.999999,step:.01,"aria-label":"Video sound volume controller"}),(0,l.jsx)("div",{className:"absolute z-0 top-1/2 left-0 w-full h-2 -mt-1 overflow-hidden before:block before:w-full before:h-full before:bg-current before:opacity-40",children:(0,l.jsx)("div",{className:"absolute bg-current w-full top-0 right-full h-full","aria-label":"Progress","aria-hidden":!0,style:{transform:`translateX(${e.muted?0:100*e.value}%) translateZ(0)`}})})]}),N=({title:e,controls:t,controlsClassname:r,onTogglePlay:n,onToggleMute:s,onVolumeChange:a,onToggleFullscreen:i,onSeekChange:o,onSeekMouseDown:c,onSeekMouseUp:p,playing:h=!1,muted:d=!1,fullscreen:f,loaded:y=0,played:m=0,volume:b=1,duration:w=0,progress:E=0,isActive:S=!1,theme:x="white",variant:M="none"})=>{let[R,N]=(0,u.useState)(!1),D=(0,C.default)();(0,u.useEffect)(()=>{(!document.fullscreenEnabled||v.iOS)&&N(!0)},[]);let U=e=>`${(e/60|0).toString().padStart(2,"0")} : ${(e%60|0).toString().padStart(2,"0")}`;return(0,l.jsxs)("div",{className:(0,I.default)("absolute z-0 inset-0 transition-opacity",{white:"text-white",black:"text-black"}[x],S?"opacity-100 duration-600":"opacity-0 duration-1000"),children:[(0,l.jsx)("div",{className:"absolute z-0 inset-0 flex items-center justify-center",onClick:n}),(0,l.jsx)("div",{className:(0,I.default)("text-10","flex items-center jutify-between gap-x-15 mb-20 margin-mx-1","absolute z-1 bottom-0 left-0 right-0 text-12 opacity-100 transition-opacity ease-quart-out",r),children:t&&t.map((t,r)=>((t,r)=>{switch(t){case"play":return(0,l.jsx)(g.Button,{variant:"none",className:"p-4 -m-4",onClick:n,"aria-label":h?D("Pause"):D("Play"),children:h?(0,l.jsx)(O,{className:"w-16"}):(0,l.jsx)(P,{className:"w-16"})},r);case"progress":return(0,l.jsx)(_,{value:m,loaded:y,onChange:o,onMouseDown:c,onMouseUp:p},r);case"mute":return(0,l.jsx)(g.Button,{variant:"none",className:(0,I.default)("lg-max:hidden p-4 -m-4","[&+.volume]:-ml-6"),onClick:s,"aria-label":d?D("Unmute"):D("Mute"),children:d?(0,l.jsx)(k,{className:"w-16"}):(0,l.jsx)(j,{className:"w-16"})},r);case"fullscreen":return(0,l.jsx)(g.Button,{variant:"none",className:(0,I.default)("p-4 -m-4",R&&"hidden"),onClick:i,"aria-label":f?D("Exit fullscreen"):D("Enter fullscreen"),children:f?(0,l.jsx)(T,{className:"w-16"}):(0,l.jsx)(L,{className:"w-16"})},r);case"current-time":return(0,l.jsx)("span",{className:"whitespace-nowrap",children:U(E)},r);case"duration":return(0,l.jsx)("span",{className:"whitespace-nowrap",children:U(w)},r);case"full-time":return(0,l.jsxs)(u.Fragment,{children:[(0,l.jsxs)("span",{className:(0,I.default)("inline-flex items-center justify-center gap-x-8 mx-auto whitespace-nowrap","modal"===M&&"-z-1 absolute inset-x-0 bottom-0 h-16 lg:h-24"),children:[(0,l.jsx)("span",{children:U(E)}),"|",(0,l.jsx)("span",{children:U(w)})]}),"modal"===M&&(0,l.jsx)("span",{className:"grow"})]},r);case"title":return(0,l.jsx)("span",{className:(0,I.default)("span-w-9 lg:span-w-6 my-10 text-12 leading-snug uppercase","modal"===M&&"absolute left-0 bottom-full pointer-events-none"),children:e},r);case"volume":return(0,l.jsx)(A,{className:"volume lg-max:hidden",value:b,muted:d,onChange:a},r)}})(t,`${t}-${r}`))})]})};var D=e.i(976),U=e.i(50342),z=e.i(43463);e.s(["VideoPlayer",0,({urls:e,playing:t=!1,config:r,title:n,className:s,controlsClassname:a,muted:i=!1,loop:o=!1,autoPlay:h=!1,autoPause:d=!1,controls:f=["play","mute","current-time","progress","duration","fullscreen"],onReady:y,onTogglePlay:v,onEnded:w,light:E=!1,theme:O="white",variant:S="none",poster:k})=>{var x;let j,M,L,R=(0,u.useRef)(),T=(0,u.useRef)(),[C,_]=(0,u.useState)(!1),[A,H]=(0,u.useState)(!1),[V,F]=(0,u.useState)(!!t||i),[B,$]=(0,u.useState)(t),[W,q]=(0,u.useState)(!0),[X,K]=(0,u.useState)("mouseOnly"),[Z,Y]=(0,u.useState)(!1),[Q,G]=(0,u.useState)(""),J=(0,u.useRef)(),ee=Object.entries(e.reduce((e,t)=>({...e,[t.width]:t.url}),{})).sort((e,t)=>parseInt(t[0])-parseInt(e[0])).map(e=>[parseInt(e[0]),e[1]]),[et,er]=(0,p.useInView)({rootMargin:"0px",skip:!d,initialInView:!d}),en=(0,u.useCallback)(e=>{T.current=e,et(e)},[et]);(0,u.useEffect)(()=>{H(!0)},[]),(0,u.useEffect)(()=>{v&&v(B),B&&W&&q(!1)},[B]),(0,u.useEffect)(()=>{$(t)},[t]),(0,u.useEffect)(()=>{C&&!er&&B&&$(!1)},[er]),(0,u.useEffect)(()=>{F(i)},[i]);let[es,ea]=(0,u.useState)({pip:!1,wasPlaying:B,fullscreen:!1,seeking:!1,controls:!1,light:E,volume:1,played:0,loaded:0,playedSeconds:0,duration:0,playbackRate:1,playsinline:!1,loop:o});(0,u.useEffect)(()=>{K(b.deviceType)},[]),(0,u.useEffect)(()=>{let e=()=>{ea({...es,fullscreen:m.isFullscreen})};if(m.isEnabled)return m.on("change",e),()=>{m.off("change",e)}},[es]);let ei=(e=!1)=>{Y(!0),clearTimeout(J.current),(!es.seeking||e)&&(J.current=setTimeout(()=>{Y(!1)},2500))},eo=(0,u.useCallback)(()=>{$(!0),Y(!0)},[]),el=(0,u.useCallback)(()=>{$(!1),ei()},[]),eu=()=>{$(!B),ei()};return(0,U.default)(T,(0,D.default)(t=>{if(T.current&&e){let e=ee.filter(e=>t.contentRect.width<e[0]);G(e?.length?e[0][1]:ee[0][1])}},50,[])),(0,l.jsxs)("div",{ref:en,className:(0,I.default)("relative flex items-start flex-col lg-max:-margin-mx-1",s),onMouseMove:e=>{!C||Math.sqrt(e.movementX*e.movementX+e.movementY*e.movementY)>1&&ei()},children:[(0,l.jsxs)("div",{className:(0,I.default)("relative w-full aspect-[375/252] lg:aspect-video m-auto",!es.fullscreen&&"max-h-screen"),children:[A&&(0,l.jsx)(c.default,{ref:R,autoPlay:h,url:Q,pip:es.pip,playing:B,controls:es.controls,light:es.light,loop:es.loop,playbackRate:es.playbackRate,volume:es.volume,muted:V,playsinline:es.playsinline,config:r||{},width:"100%",height:"100%",className:"[&_video]:object-cover",onDuration:e=>{ea({...es,duration:e})},onReady:()=>{_(!0),y&&y()},onPlay:eo,onPause:el,onProgress:e=>{es.seeking||ea({...es,...e})},onEnded:()=>{q(!0),w&&w()},onError:e=>console.warn("videoplayer error",e)}),(0,l.jsx)(N,{isActive:C&&("touchOnly"===X||Z),title:n,controls:f,controlsClassname:a,onTogglePlay:eu,onToggleMute:()=>{F(!V)},onVolumeChange:e=>{ea({...es,volume:parseFloat(e.target.value)}),F(e.target.value<.01)},onToggleFullscreen:()=>{m.isEnabled&&m.toggle(T.current)},onSeekChange:e=>{R.current?.seekTo(parseFloat(e.target.value)),ea({...es,played:parseFloat(e.target.value)})},onSeekMouseDown:()=>{ea({...es,wasPlaying:B,seeking:!0}),$(!1),ei()},onSeekMouseUp:()=>{ea({...es,seeking:!1}),$(es.wasPlaying),ei(!0)},fullscreen:es.fullscreen,playing:B,muted:V,loaded:es.loaded,progress:es.playedSeconds,duration:es.duration,played:es.played,volume:es.volume,theme:O,variant:S}),(0,l.jsxs)("div",{className:(0,I.default)("absolute z-2 inset-0 opacity-100 visible transition-[opacity,visiblity] duration-[0.5s,0s] delay-[0s,0.5s] ease-quart-out",!W&&C&&"opacity-0 invisible"),children:[k&&(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)(z.SanityImage,{image:k,width:1440,height:9/16*1440,desktopWidth:1440,fill:!0,desktopOnly:!0}),(0,l.jsx)(z.SanityImage,{image:k,width:335,height:425,mobileWidth:335,fill:!0,mobileOnly:!0})]}),(0,l.jsx)(g.Button,{onClick:eu,className:"absolute inset-0 z-3 w-full h-full grid place-content-center bg-black/30","aria-label":"play video",children:(0,l.jsx)("span",{className:"w-40 h-40 grid place-content-center bg-white",children:(0,l.jsx)(P,{className:"w-8 h-8"})})})]})]}),(0,l.jsxs)("div",{className:(0,I.default)("z-2 pointer-events-none font-mono w-full","flex items-center justify-between mt-10 lg-max:margin-px-1"),children:[(0,l.jsx)("p",{className:(0,I.default)("flex items-center before:block before:w-4 before:h-4 before:mr-6 before:bg-black","text-black text-10 uppercase"),children:n}),(0,l.jsxs)("span",{className:"text-10 text-black",children:["[",(j=((x=es.duration)/3600|0).toString().padStart(2,"0"),M=(x%3600/60|0).toString().padStart(2,"0"),L=Math.round(x%60).toString().padStart(2,"0"),`${j}:${M}:${L}`),"]"]})]})]})}],35628)}]);
+(globalThis.TURBOPACK || (globalThis.TURBOPACK = [])).push(["object" == typeof document ? document.currentScript :
+    void 0, 38158, (e, t, r) => {
+        "use strict";
+        var n = function(e) {
+                var t, r, n;
+                return !!(t = e) && "object" == typeof t && (r = e, "[object RegExp]" !== (n = Object.prototype
+                    .toString.call(r)) && "[object Date]" !== n && r.$$typeof !== s)
+            },
+            s = "function" == typeof Symbol && Symbol.for ? Symbol.for("react.element") : 60103;
+
+        function a(e, t) {
+            return !1 !== t.clone && t.isMergeableObject(e) ? u(Array.isArray(e) ? [] : {}, e, t) : e
+        }
+
+        function i(e, t, r) {
+            return e.concat(t).map(function(e) {
+                return a(e, r)
+            })
+        }
+
+        function o(e) {
+            return Object.keys(e).concat(Object.getOwnPropertySymbols ? Object.getOwnPropertySymbols(e).filter(
+                function(t) {
+                    return Object.propertyIsEnumerable.call(e, t)
+                }) : [])
+        }
+
+        function l(e, t) {
+            try {
+                return t in e
+            } catch (e) {
+                return !1
+            }
+        }
+
+        function u(e, t, r) {
+            (r = r || {}).arrayMerge = r.arrayMerge || i, r.isMergeableObject = r.isMergeableObject || n, r
+                .cloneUnlessOtherwiseSpecified = a;
+            var s, c, p = Array.isArray(t);
+            return p !== Array.isArray(e) ? a(t, r) : p ? r.arrayMerge(e, t, r) : (c = {}, (s = r)
+                .isMergeableObject(e) && o(e).forEach(function(t) {
+                    c[t] = a(e[t], s)
+                }), o(t).forEach(function(r) {
+                    l(e, r) && !(Object.hasOwnProperty.call(e, r) && Object.propertyIsEnumerable.call(e,
+                        r)) || (l(e, r) && s.isMergeableObject(t[r]) ? c[r] = (function(e, t) {
+                        if (!t.customMerge) return u;
+                        var r = t.customMerge(e);
+                        return "function" == typeof r ? r : u
+                    })(r, s)(e[r], t[r], s) : c[r] = a(t[r], s))
+                }), c)
+        }
+        u.all = function(e, t) {
+            if (!Array.isArray(e)) throw Error("first argument should be an array");
+            return e.reduce(function(e, r) {
+                return u(e, r, t)
+            }, {})
+        }, t.exports = u
+    },
+    14047, e => {
+        "use strict";
+        var t = Number.isNaN || function(e) {
+            return "number" == typeof e && e != e
+        };
+
+        function r(e, r) {
+            if (e.length !== r.length) return !1;
+            for (var n, s, a = 0; a < e.length; a++)
+                if (!((n = e[a]) === (s = r[a]) || t(n) && t(s)) && 1) return !1;
+            return !0
+        }
+        e.s(["default", 0, function(e, t) {
+            void 0 === t && (t = r);
+            var n, s, a = [],
+                i = !1;
+            return function() {
+                for (var r = [], o = 0; o < arguments.length; o++) r[o] = arguments[o];
+                return i && n === this && t(r, a) || (s = e.apply(this, r), i = !0, n = this,
+                    a = r), s
+            }
+        }])
+    },
+    76873, (e, t, r) => {
+        var n = "u" > typeof Element,
+            s = "function" == typeof Map,
+            a = "function" == typeof Set,
+            i = "function" == typeof ArrayBuffer && !!ArrayBuffer.isView;
+        t.exports = function(e, t) {
+            try {
+                return function e(t, r) {
+                    if (t === r) return !0;
+                    if (t && r && "object" == typeof t && "object" == typeof r) {
+                        var o, l, u, c;
+                        if (t.constructor !== r.constructor) return !1;
+                        if (Array.isArray(t)) {
+                            if ((o = t.length) != r.length) return !1;
+                            for (l = o; 0 != l--;)
+                                if (!e(t[l], r[l])) return !1;
+                            return !0
+                        }
+                        if (s && t instanceof Map && r instanceof Map) {
+                            if (t.size !== r.size) return !1;
+                            for (c = t.entries(); !(l = c.next()).done;)
+                                if (!r.has(l.value[0])) return !1;
+                            for (c = t.entries(); !(l = c.next()).done;)
+                                if (!e(l.value[1], r.get(l.value[0]))) return !1;
+                            return !0
+                        }
+                        if (a && t instanceof Set && r instanceof Set) {
+                            if (t.size !== r.size) return !1;
+                            for (c = t.entries(); !(l = c.next()).done;)
+                                if (!r.has(l.value[0])) return !1;
+                            return !0
+                        }
+                        if (i && ArrayBuffer.isView(t) && ArrayBuffer.isView(r)) {
+                            if ((o = t.length) != r.length) return !1;
+                            for (l = o; 0 != l--;)
+                                if (t[l] !== r[l]) return !1;
+                            return !0
+                        }
+                        if (t.constructor === RegExp) return t.source === r.source && t.flags === r
+                            .flags;
+                        if (t.valueOf !== Object.prototype.valueOf && "function" == typeof t.valueOf &&
+                            "function" == typeof r.valueOf) return t.valueOf() === r.valueOf();
+                        if (t.toString !== Object.prototype.toString && "function" == typeof t
+                            .toString && "function" == typeof r.toString) return t.toString() === r
+                            .toString();
+                        if ((o = (u = Object.keys(t)).length) !== Object.keys(r).length) return !1;
+                        for (l = o; 0 != l--;)
+                            if (!Object.prototype.hasOwnProperty.call(r, u[l])) return !1;
+                        if (n && t instanceof Element) return !1;
+                        for (l = o; 0 != l--;)
+                            if (("_owner" !== u[l] && "__v" !== u[l] && "__o" !== u[l] || !t
+                                .$$typeof) && !e(t[u[l]], r[u[l]])) return !1;
+                        return !0
+                    }
+                    return t != t && r != r
+                }(e, t)
+            } catch (e) {
+                if ((e.message || "").match(/stack|recursion/i)) return console.warn(
+                    "react-fast-compare cannot handle circular refs"), !1;
+                throw e
+            }
+        }
+    },
+    84485, (e, t, r) => {
+        "use strict";
+        t.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+    },
+    62376, (e, t, r) => {
+        "use strict";
+        var n = e.r(84485);
+
+        function s() {}
+
+        function a() {}
+        a.resetWarningCache = s, t.exports = function() {
+            function e(e, t, r, s, a, i) {
+                if (i !== n) {
+                    var o = Error(
+                        "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types"
+                        );
+                    throw o.name = "Invariant Violation", o
+                }
+            }
+
+            function t() {
+                return e
+            }
+            e.isRequired = e;
+            var r = {
+                array: e,
+                bigint: e,
+                bool: e,
+                func: e,
+                number: e,
+                object: e,
+                string: e,
+                symbol: e,
+                any: e,
+                arrayOf: t,
+                element: e,
+                elementType: e,
+                instanceOf: t,
+                node: e,
+                objectOf: t,
+                oneOf: t,
+                oneOfType: t,
+                shape: t,
+                exact: t,
+                checkPropTypes: a,
+                resetWarningCache: s
+            };
+            return r.PropTypes = r, r
+        }
+    },
+    59414, (e, t, r) => {
+        t.exports = e.r(62376)()
+    },
+    94346, (e, t, r) => {
+        let n, s, a;
+        var i = Object.create,
+            o = Object.defineProperty,
+            l = Object.getOwnPropertyDescriptor,
+            u = Object.getOwnPropertyNames,
+            c = Object.getPrototypeOf,
+            p = Object.prototype.hasOwnProperty,
+            h = (e, t, r, n) => {
+                if (t && "object" == typeof t || "function" == typeof t)
+                    for (let s of u(t)) p.call(e, s) || s === r || o(e, s, {
+                        get: () => t[s],
+                        enumerable: !(n = l(t, s)) || n.enumerable
+                    });
+                return e
+            },
+            d = {},
+            f = {
+                defaultProps: () => j,
+                propTypes: () => k
+            };
+        for (var y in f) o(d, y, {
+            get: f[y],
+            enumerable: !0
+        });
+        t.exports = h(o({}, "__esModule", {
+            value: !0
+        }), d);
+        let {
+            string: m,
+            bool: b,
+            number: g,
+            array: v,
+            oneOfType: w,
+            shape: P,
+            object: E,
+            func: O,
+            node: S
+        } = (a = null != (n = e.r(59414)) ? i(c(n)) : {}, h(!s && n && n.__esModule ? a : o(a, "default", {
+            value: n,
+            enumerable: !0
+        }), n)).default, k = {
+            url: w([m, v, E]),
+            playing: b,
+            loop: b,
+            controls: b,
+            volume: g,
+            muted: b,
+            playbackRate: g,
+            width: w([m, g]),
+            height: w([m, g]),
+            style: E,
+            progressInterval: g,
+            playsinline: b,
+            pip: b,
+            stopOnUnmount: b,
+            light: w([b, m, E]),
+            playIcon: S,
+            previewTabIndex: g,
+            previewAriaLabel: m,
+            fallback: S,
+            oEmbedUrl: m,
+            wrapper: w([m, O, P({
+                render: O.isRequired
+            })]),
+            config: P({
+                soundcloud: P({
+                    options: E
+                }),
+                youtube: P({
+                    playerVars: E,
+                    embedOptions: E,
+                    onUnstarted: O
+                }),
+                facebook: P({
+                    appId: m,
+                    version: m,
+                    playerId: m,
+                    attributes: E
+                }),
+                dailymotion: P({
+                    params: E
+                }),
+                vimeo: P({
+                    playerOptions: E,
+                    title: m
+                }),
+                mux: P({
+                    attributes: E,
+                    version: m
+                }),
+                file: P({
+                    attributes: E,
+                    tracks: v,
+                    forceVideo: b,
+                    forceAudio: b,
+                    forceHLS: b,
+                    forceSafariHLS: b,
+                    forceDisableHls: b,
+                    forceDASH: b,
+                    forceFLV: b,
+                    hlsOptions: E,
+                    hlsVersion: m,
+                    dashVersion: m,
+                    flvVersion: m
+                }),
+                wistia: P({
+                    options: E,
+                    playerId: m,
+                    customControls: v
+                }),
+                mixcloud: P({
+                    options: E
+                }),
+                twitch: P({
+                    options: E,
+                    playerId: m
+                }),
+                vidyard: P({
+                    options: E
+                })
+            }),
+            onReady: O,
+            onStart: O,
+            onPlay: O,
+            onPause: O,
+            onBuffer: O,
+            onBufferEnd: O,
+            onEnded: O,
+            onError: O,
+            onDuration: O,
+            onSeek: O,
+            onPlaybackRateChange: O,
+            onPlaybackQualityChange: O,
+            onProgress: O,
+            onClickPreview: O,
+            onEnablePIP: O,
+            onDisablePIP: O
+        }, x = () => {}, j = {
+            playing: !1,
+            loop: !1,
+            controls: !1,
+            volume: null,
+            muted: !1,
+            playbackRate: 1,
+            width: "640px",
+            height: "360px",
+            style: {},
+            progressInterval: 1e3,
+            playsinline: !1,
+            pip: !1,
+            stopOnUnmount: !0,
+            light: !1,
+            fallback: null,
+            wrapper: "div",
+            previewTabIndex: 0,
+            previewAriaLabel: "",
+            oEmbedUrl: "https://noembed.com/embed?url={url}",
+            config: {
+                soundcloud: {
+                    options: {
+                        visual: !0,
+                        buying: !1,
+                        liking: !1,
+                        download: !1,
+                        sharing: !1,
+                        show_comments: !1,
+                        show_playcount: !1
+                    }
+                },
+                youtube: {
+                    playerVars: {
+                        playsinline: 1,
+                        showinfo: 0,
+                        rel: 0,
+                        iv_load_policy: 3,
+                        modestbranding: 1
+                    },
+                    embedOptions: {},
+                    onUnstarted: x
+                },
+                facebook: {
+                    appId: "1309697205772819",
+                    version: "v3.3",
+                    playerId: null,
+                    attributes: {}
+                },
+                dailymotion: {
+                    params: {
+                        api: 1,
+                        "endscreen-enable": !1
+                    }
+                },
+                vimeo: {
+                    playerOptions: {
+                        autopause: !1,
+                        byline: !1,
+                        portrait: !1,
+                        title: !1
+                    },
+                    title: null
+                },
+                mux: {
+                    attributes: {},
+                    version: "2"
+                },
+                file: {
+                    attributes: {},
+                    tracks: [],
+                    forceVideo: !1,
+                    forceAudio: !1,
+                    forceHLS: !1,
+                    forceDASH: !1,
+                    forceFLV: !1,
+                    hlsOptions: {},
+                    hlsVersion: "1.1.4",
+                    dashVersion: "3.1.3",
+                    flvVersion: "1.5.0",
+                    forceDisableHls: !1
+                },
+                wistia: {
+                    options: {},
+                    playerId: null,
+                    customControls: null
+                },
+                mixcloud: {
+                    options: {
+                        hide_cover: 1
+                    }
+                },
+                twitch: {
+                    options: {},
+                    playerId: null
+                },
+                vidyard: {
+                    options: {}
+                }
+            },
+            onReady: x,
+            onStart: x,
+            onPlay: x,
+            onPause: x,
+            onBuffer: x,
+            onBufferEnd: x,
+            onEnded: x,
+            onError: x,
+            onDuration: x,
+            onSeek: x,
+            onPlaybackRateChange: x,
+            onPlaybackQualityChange: x,
+            onProgress: x,
+            onClickPreview: x,
+            onEnablePIP: x,
+            onDisablePIP: x
+        }
+    },
+    45244, (e, t, r) => {
+        function n(e, t) {
+            e.onload = function() {
+                this.onerror = this.onload = null, t(null, e)
+            }, e.onerror = function() {
+                this.onerror = this.onload = null, t(Error("Failed to load " + this.src), e)
+            }
+        }
+        t.exports = function(e, t, r) {
+            var s = document.head || document.getElementsByTagName("head")[0],
+                a = document.createElement("script");
+            "function" == typeof t && (r = t, t = {}), r = r || function() {}, a.type = (t = t || {})
+                .type || "text/javascript", a.charset = t.charset || "utf8", a.async = !("async" in t) || !!
+                t.async, a.src = e, t.attrs && function(e, t) {
+                    for (var r in t) e.setAttribute(r, t[r])
+                }(a, t.attrs), t.text && (a.text = "" + t.text), ("onload" in a ? n : function(e, t) {
+                    e.onreadystatechange = function() {
+                        ("complete" == this.readyState || "loaded" == this.readyState) && (this
+                            .onreadystatechange = null, t(null, e))
+                    }
+                })(a, r), a.onload || n(a, r), s.appendChild(a)
+        }
+    },
+    2217, (e, t, r) => {
+        var n = Object.create,
+            s = Object.defineProperty,
+            a = Object.getOwnPropertyDescriptor,
+            i = Object.getOwnPropertyNames,
+            o = Object.getPrototypeOf,
+            l = Object.prototype.hasOwnProperty,
+            u = (e, t, r, n) => {
+                if (t && "object" == typeof t || "function" == typeof t)
+                    for (let o of i(t)) l.call(e, o) || o === r || s(e, o, {
+                        get: () => t[o],
+                        enumerable: !(n = a(t, o)) || n.enumerable
+                    });
+                return e
+            },
+            c = (e, t, r) => (r = null != e ? n(o(e)) : {}, u(!t && e && e.__esModule ? r : s(r, "default", {
+                value: e,
+                enumerable: !0
+            }), e)),
+            p = {},
+            h = {
+                callPlayer: () => C,
+                getConfig: () => R,
+                getSDK: () => L,
+                isBlobUrl: () => _,
+                isMediaStream: () => I,
+                lazy: () => b,
+                omit: () => T,
+                parseEndTime: () => S,
+                parseStartTime: () => O,
+                queryString: () => x,
+                randomString: () => k,
+                supportsWebKitPresentationMode: () => A
+            };
+        for (var d in h) s(p, d, {
+            get: h[d],
+            enumerable: !0
+        });
+        t.exports = u(s({}, "__esModule", {
+            value: !0
+        }), p);
+        var f = c(e.r(53014)),
+            y = c(e.r(45244)),
+            m = c(e.r(38158));
+        let b = e => f.default.lazy(async () => {
+                let t = await e();
+                return "function" == typeof t.default ? t : t.default
+            }),
+            g = /[?&#](?:start|t)=([0-9hms]+)/,
+            v = /[?&#]end=([0-9hms]+)/,
+            w = /(\d+)(h|m|s)/g,
+            P = /^\d+$/;
+
+        function E(e, t) {
+            if (e instanceof Array) return;
+            let r = e.match(t);
+            if (r) {
+                let e = r[1];
+                if (e.match(w)) {
+                    var n = e;
+                    let t = 0,
+                        r = w.exec(n);
+                    for (; null !== r;) {
+                        let [, e, s] = r;
+                        "h" === s && (t += 60 * parseInt(e, 10) * 60), "m" === s && (t += 60 * parseInt(e, 10)),
+                            "s" === s && (t += parseInt(e, 10)), r = w.exec(n)
+                    }
+                    return t
+                }
+                if (P.test(e)) return parseInt(e)
+            }
+        }
+
+        function O(e) {
+            return E(e, g)
+        }
+
+        function S(e) {
+            return E(e, v)
+        }
+
+        function k() {
+            return Math.random().toString(36).substr(2, 5)
+        }
+
+        function x(e) {
+            return Object.keys(e).map(t => `${t}=${e[t]}`).join("&")
+        }
+
+        function j(e) {
+            return window[e] ? window[e] : window.exports && window.exports[e] ? window.exports[e] : window
+                .module && window.module.exports && window.module.exports[e] ? window.module.exports[e] : null
+        }
+        let M = {},
+            L = function(e, t, r = null, n = () => !0, s = y.default) {
+                let a = j(t);
+                return a && n(a) ? Promise.resolve(a) : new Promise((n, a) => {
+                    if (M[e]) return void M[e].push({
+                        resolve: n,
+                        reject: a
+                    });
+                    M[e] = [{
+                        resolve: n,
+                        reject: a
+                    }];
+                    let i = t => {
+                        M[e].forEach(e => e.resolve(t))
+                    };
+                    if (r) {
+                        let e = window[r];
+                        window[r] = function() {
+                            e && e(), i(j(t))
+                        }
+                    }
+                    s(e, n => {
+                        n ? (M[e].forEach(e => e.reject(n)), M[e] = null) : r || i(j(t))
+                    })
+                })
+            };
+
+        function R(e, t) {
+            return (0, m.default)(t.config, e.config)
+        }
+
+        function T(e, ...t) {
+            let r = [].concat(...t),
+                n = {};
+            for (let t of Object.keys(e)) - 1 === r.indexOf(t) && (n[t] = e[t]);
+            return n
+        }
+
+        function C(e, ...t) {
+            if (!this.player || !this.player[e]) {
+                let t = `ReactPlayer: ${this.constructor.displayName} player could not call %c${e}%c \u2013 `;
+                return this.player ? this.player[e] || (t += "The method was not available") : t +=
+                    "The player was not available", console.warn(t, "font-weight: bold", ""), null
+            }
+            return this.player[e](...t)
+        }
+
+        function I(e) {
+            return "u" > typeof window && void 0 !== window.MediaStream && e instanceof window.MediaStream
+        }
+
+        function _(e) {
+            return /^blob:/.test(e)
+        }
+
+        function A(e = document.createElement("video")) {
+            let t = !1 === /iPhone|iPod/.test(navigator.userAgent);
+            return e.webkitSupportsPresentationMode && "function" == typeof e.webkitSetPresentationMode && t
+        }
+    },
+    63760, (e, t, r) => {
+        var n = Object.create,
+            s = Object.defineProperty,
+            a = Object.getOwnPropertyDescriptor,
+            i = Object.getOwnPropertyNames,
+            o = Object.getPrototypeOf,
+            l = Object.prototype.hasOwnProperty,
+            u = (e, t, r, n) => {
+                if (t && "object" == typeof t || "function" == typeof t)
+                    for (let o of i(t)) l.call(e, o) || o === r || s(e, o, {
+                        get: () => t[o],
+                        enumerable: !(n = a(t, o)) || n.enumerable
+                    });
+                return e
+            },
+            c = (e, t, r) => (r = null != e ? n(o(e)) : {}, u(!t && e && e.__esModule ? r : s(r, "default", {
+                value: e,
+                enumerable: !0
+            }), e)),
+            p = (e, t, r) => {
+                let n;
+                return (n = "symbol" != typeof t ? t + "" : t) in e ? s(e, n, {
+                    enumerable: !0,
+                    configurable: !0,
+                    writable: !0,
+                    value: r
+                }) : e[n] = r, r
+            },
+            h = {},
+            d = {
+                default: () => v
+            };
+        for (var f in d) s(h, f, {
+            get: d[f],
+            enumerable: !0
+        });
+        t.exports = u(s({}, "__esModule", {
+            value: !0
+        }), h);
+        var y = c(e.r(53014)),
+            m = c(e.r(76873)),
+            b = e.r(94346),
+            g = e.r(2217);
+        class v extends y.Component {
+            constructor() {
+                super(...arguments), p(this, "mounted", !1), p(this, "isReady", !1), p(this,
+                    "isPlaying", !1), p(this, "isLoading", !0), p(this, "loadOnReady", null), p(
+                    this, "startOnPlay", !0), p(this, "seekOnPlay", null), p(this,
+                    "onDurationCalled", !1), p(this, "handlePlayerMount", e => {
+                    this.player || (this.player = e, this.player.load(this.props.url)), this
+                        .progress()
+                }), p(this, "getInternalPlayer", e => this.player ? this.player[e] : null), p(this,
+                    "progress", () => {
+                        if (this.props.url && this.player && this.isReady) {
+                            let e = this.getCurrentTime() || 0,
+                                t = this.getSecondsLoaded(),
+                                r = this.getDuration();
+                            if (r) {
+                                let n = {
+                                    playedSeconds: e,
+                                    played: e / r
+                                };
+                                null !== t && (n.loadedSeconds = t, n.loaded = t / r), (n
+                                        .playedSeconds !== this.prevPlayed || n.loadedSeconds !==
+                                        this.prevLoaded) && this.props.onProgress(n), this
+                                    .prevPlayed = n.playedSeconds, this.prevLoaded = n.loadedSeconds
+                            }
+                        }
+                        this.progressTimeout = setTimeout(this.progress, this.props
+                            .progressFrequency || this.props.progressInterval)
+                    }), p(this, "handleReady", () => {
+                    if (!this.mounted) return;
+                    this.isReady = !0, this.isLoading = !1;
+                    let {
+                        onReady: e,
+                        playing: t,
+                        volume: r,
+                        muted: n
+                    } = this.props;
+                    e(), n || null === r || this.player.setVolume(r), this.loadOnReady ? (this
+                            .player.load(this.loadOnReady, !0), this.loadOnReady = null) : t &&
+                        this.player.play(), this.handleDurationCheck()
+                }), p(this, "handlePlay", () => {
+                    this.isPlaying = !0, this.isLoading = !1;
+                    let {
+                        onStart: e,
+                        onPlay: t,
+                        playbackRate: r
+                    } = this.props;
+                    this.startOnPlay && (this.player.setPlaybackRate && 1 !== r && this.player
+                            .setPlaybackRate(r), e(), this.startOnPlay = !1), t(), this
+                        .seekOnPlay && (this.seekTo(this.seekOnPlay), this.seekOnPlay = null),
+                        this.handleDurationCheck()
+                }), p(this, "handlePause", e => {
+                    this.isPlaying = !1, this.isLoading || this.props.onPause(e)
+                }), p(this, "handleEnded", () => {
+                    let {
+                        activePlayer: e,
+                        loop: t,
+                        onEnded: r
+                    } = this.props;
+                    e.loopOnEnded && t && this.seekTo(0), t || (this.isPlaying = !1, r())
+                }), p(this, "handleError", (...e) => {
+                    this.isLoading = !1, this.props.onError(...e)
+                }), p(this, "handleDurationCheck", () => {
+                    clearTimeout(this.durationCheckTimeout);
+                    let e = this.getDuration();
+                    e ? this.onDurationCalled || (this.props.onDuration(e), this
+                        .onDurationCalled = !0) : this.durationCheckTimeout = setTimeout(
+                        this.handleDurationCheck, 100)
+                }), p(this, "handleLoaded", () => {
+                    this.isLoading = !1
+                })
+            }
+            componentDidMount() {
+                this.mounted = !0
+            }
+            componentWillUnmount() {
+                clearTimeout(this.progressTimeout), clearTimeout(this.durationCheckTimeout), this
+                    .isReady && this.props.stopOnUnmount && (this.player.stop(), this.player
+                        .disablePIP && this.player.disablePIP()), this.mounted = !1
+            }
+            componentDidUpdate(e) {
+                if (!this.player) return;
+                let {
+                    url: t,
+                    playing: r,
+                    volume: n,
+                    muted: s,
+                    playbackRate: a,
+                    pip: i,
+                    loop: o,
+                    activePlayer: l,
+                    disableDeferredLoading: u
+                } = this.props;
+                if (!(0, m.default)(e.url, t)) {
+                    if (this.isLoading && !l.forceLoad && !u && !(0, g.isMediaStream)(t)) {
+                        console.warn(
+                            `ReactPlayer: the attempt to load ${t} is being deferred until the player has loaded`
+                            ), this.loadOnReady = t;
+                        return
+                    }
+                    this.isLoading = !0, this.startOnPlay = !0, this.onDurationCalled = !1, this.player
+                        .load(t, this.isReady)
+                }
+                e.playing || !r || this.isPlaying || this.player.play(), e.playing && !r && this
+                    .isPlaying && this.player.pause(), !e.pip && i && this.player.enablePIP && this
+                    .player.enablePIP(), e.pip && !i && this.player.disablePIP && this.player
+                    .disablePIP(), e.volume !== n && null !== n && this.player.setVolume(n), e.muted !==
+                    s && (s ? this.player.mute() : (this.player.unmute(), null !== n && setTimeout(() =>
+                        this.player.setVolume(n)))), e.playbackRate !== a && this.player
+                    .setPlaybackRate && this.player.setPlaybackRate(a), e.loop !== o && this.player
+                    .setLoop && this.player.setLoop(o)
+            }
+            getDuration() {
+                return this.isReady ? this.player.getDuration() : null
+            }
+            getCurrentTime() {
+                return this.isReady ? this.player.getCurrentTime() : null
+            }
+            getSecondsLoaded() {
+                return this.isReady ? this.player.getSecondsLoaded() : null
+            }
+            seekTo(e, t, r) {
+                if (!this.isReady) {
+                    0 !== e && (this.seekOnPlay = e, setTimeout(() => {
+                        this.seekOnPlay = null
+                    }, 5e3));
+                    return
+                }
+                if (t ? "fraction" === t : e > 0 && e < 1) {
+                    let t = this.player.getDuration();
+                    return t ? void this.player.seekTo(t * e, r) : void console.warn(
+                        "ReactPlayer: could not seek using fraction – duration not yet available")
+                }
+                this.player.seekTo(e, r)
+            }
+            render() {
+                let e = this.props.activePlayer;
+                return e ? y.default.createElement(e, {
+                    ...this.props,
+                    onMount: this.handlePlayerMount,
+                    onReady: this.handleReady,
+                    onPlay: this.handlePlay,
+                    onPause: this.handlePause,
+                    onEnded: this.handleEnded,
+                    onLoaded: this.handleLoaded,
+                    onError: this.handleError
+                }) : null
+            }
+        }
+        p(v, "displayName", "Player"), p(v, "propTypes", b.propTypes), p(v, "defaultProps", b.defaultProps)
+    },
+    62119, (e, t, r) => {
+        var n = Object.create,
+            s = Object.defineProperty,
+            a = Object.getOwnPropertyDescriptor,
+            i = Object.getOwnPropertyNames,
+            o = Object.getPrototypeOf,
+            l = Object.prototype.hasOwnProperty,
+            u = (e, t, r, n) => {
+                if (t && "object" == typeof t || "function" == typeof t)
+                    for (let o of i(t)) l.call(e, o) || o === r || s(e, o, {
+                        get: () => t[o],
+                        enumerable: !(n = a(t, o)) || n.enumerable
+                    });
+                return e
+            },
+            c = (e, t, r) => (r = null != e ? n(o(e)) : {}, u(!t && e && e.__esModule ? r : s(r, "default", {
+                value: e,
+                enumerable: !0
+            }), e)),
+            p = (e, t, r) => {
+                let n;
+                return (n = "symbol" != typeof t ? t + "" : t) in e ? s(e, n, {
+                    enumerable: !0,
+                    configurable: !0,
+                    writable: !0,
+                    value: r
+                }) : e[n] = r, r
+            },
+            h = {},
+            d = {
+                createReactPlayer: () => M
+            };
+        for (var f in d) s(h, f, {
+            get: d[f],
+            enumerable: !0
+        });
+        t.exports = u(s({}, "__esModule", {
+            value: !0
+        }), h);
+        var y = c(e.r(53014)),
+            m = c(e.r(38158)),
+            b = c(e.r(14047)),
+            g = c(e.r(76873)),
+            v = e.r(94346),
+            w = e.r(2217),
+            P = c(e.r(63760));
+        let E = (0, w.lazy)(() => e.A(16808)),
+            O = "u" > typeof window && window.document && "u" > typeof document,
+            S = e.g.window && e.g.window.document,
+            k = Object.keys(v.propTypes),
+            x = O || S ? y.Suspense : () => null,
+            j = [],
+            M = (e, t) => {
+                var r;
+                return r = class extends y.Component {
+                    constructor() {
+                        super(...arguments), p(this, "state", {
+                            showPreview: !!this.props.light
+                        }), p(this, "references", {
+                            wrapper: e => {
+                                this.wrapper = e
+                            },
+                            player: e => {
+                                this.player = e
+                            }
+                        }), p(this, "handleClickPreview", e => {
+                            this.setState({
+                                showPreview: !1
+                            }), this.props.onClickPreview(e)
+                        }), p(this, "showPreview", () => {
+                            this.setState({
+                                showPreview: !0
+                            })
+                        }), p(this, "getDuration", () => this.player ? this.player.getDuration() :
+                            null), p(this, "getCurrentTime", () => this.player ? this.player
+                            .getCurrentTime() : null), p(this, "getSecondsLoaded", () => this
+                            .player ? this.player.getSecondsLoaded() : null), p(this,
+                            "getInternalPlayer", (e = "player") => this.player ? this.player
+                            .getInternalPlayer(e) : null), p(this, "seekTo", (e, t, r) => {
+                            if (!this.player) return null;
+                            this.player.seekTo(e, t, r)
+                        }), p(this, "handleReady", () => {
+                            this.props.onReady(this)
+                        }), p(this, "getActivePlayer", (0, b.default)(r => {
+                            for (let t of [...j, ...e])
+                                if (t.canPlay(r)) return t;
+                            return t || null
+                        })), p(this, "getConfig", (0, b.default)((e, t) => {
+                            let {
+                                config: r
+                            } = this.props;
+                            return m.default.all([v.defaultProps.config, v.defaultProps
+                                .config[t] || {},
+                                r, r[t] || {}
+                            ])
+                        })), p(this, "getAttributes", (0, b.default)(e => (0, w.omit)(this.props,
+                            k))), p(this, "renderActivePlayer", e => {
+                            if (!e) return null;
+                            let t = this.getActivePlayer(e);
+                            if (!t) return null;
+                            let r = this.getConfig(e, t.key);
+                            return y.default.createElement(P.default, {
+                                ...this.props,
+                                key: t.key,
+                                ref: this.references.player,
+                                config: r,
+                                activePlayer: t.lazyPlayer || t,
+                                onReady: this.handleReady
+                            })
+                        })
+                    }
+                    shouldComponentUpdate(e, t) {
+                        return !(0, g.default)(this.props, e) || !(0, g.default)(this.state, t)
+                    }
+                    componentDidUpdate(e) {
+                        let {
+                            light: t
+                        } = this.props;
+                        !e.light && t && this.setState({
+                            showPreview: !0
+                        }), e.light && !t && this.setState({
+                            showPreview: !1
+                        })
+                    }
+                    renderPreview(e) {
+                        if (!e) return null;
+                        let {
+                            light: t,
+                            playIcon: r,
+                            previewTabIndex: n,
+                            oEmbedUrl: s,
+                            previewAriaLabel: a
+                        } = this.props;
+                        return y.default.createElement(E, {
+                            url: e,
+                            light: t,
+                            playIcon: r,
+                            previewTabIndex: n,
+                            previewAriaLabel: a,
+                            oEmbedUrl: s,
+                            onClick: this.handleClickPreview
+                        })
+                    }
+                    render() {
+                        let {
+                            url: e,
+                            style: t,
+                            width: r,
+                            height: n,
+                            fallback: s,
+                            wrapper: a
+                        } = this.props, {
+                                showPreview: i
+                            } = this.state, o = this.getAttributes(e), l = "string" == typeof a ? this
+                            .references.wrapper : void 0;
+                        return y.default.createElement(a, {
+                            ref: l,
+                            style: {
+                                ...t,
+                                width: r,
+                                height: n
+                            },
+                            ...o
+                        }, y.default.createElement(x, {
+                            fallback: s
+                        }, i ? this.renderPreview(e) : this.renderActivePlayer(e)))
+                    }
+                }, p(r, "displayName", "ReactPlayer"), p(r, "propTypes", v.propTypes), p(r, "defaultProps",
+                    v.defaultProps), p(r, "addCustomPlayer", e => {
+                    j.push(e)
+                }), p(r, "removeCustomPlayers", () => {
+                    j.length = 0
+                }), p(r, "canPlay", t => {
+                    for (let r of [...j, ...e])
+                        if (r.canPlay(t)) return !0;
+                    return !1
+                }), p(r, "canEnablePIP", t => {
+                    for (let r of [...j, ...e])
+                        if (r.canEnablePIP && r.canEnablePIP(t)) return !0;
+                    return !1
+                }), r
+            }
+    },
+    7230, (e, t, r) => {
+        var n = Object.defineProperty,
+            s = Object.getOwnPropertyDescriptor,
+            a = Object.getOwnPropertyNames,
+            i = Object.prototype.hasOwnProperty,
+            o = {},
+            l = {
+                AUDIO_EXTENSIONS: () => k,
+                DASH_EXTENSIONS: () => M,
+                FLV_EXTENSIONS: () => L,
+                HLS_EXTENSIONS: () => j,
+                MATCH_URL_DAILYMOTION: () => P,
+                MATCH_URL_FACEBOOK: () => y,
+                MATCH_URL_FACEBOOK_WATCH: () => m,
+                MATCH_URL_KALTURA: () => S,
+                MATCH_URL_MIXCLOUD: () => E,
+                MATCH_URL_MUX: () => f,
+                MATCH_URL_SOUNDCLOUD: () => h,
+                MATCH_URL_STREAMABLE: () => b,
+                MATCH_URL_TWITCH_CHANNEL: () => w,
+                MATCH_URL_TWITCH_VIDEO: () => v,
+                MATCH_URL_VIDYARD: () => O,
+                MATCH_URL_VIMEO: () => d,
+                MATCH_URL_WISTIA: () => g,
+                MATCH_URL_YOUTUBE: () => p,
+                VIDEO_EXTENSIONS: () => x,
+                canPlay: () => T
+            };
+        for (var u in l) n(o, u, {
+            get: l[u],
+            enumerable: !0
+        });
+        t.exports = ((e, t, r, o) => {
+            if (t && "object" == typeof t || "function" == typeof t)
+                for (let l of a(t)) i.call(e, l) || l === r || n(e, l, {
+                    get: () => t[l],
+                    enumerable: !(o = s(t, l)) || o.enumerable
+                });
+            return e
+        })(n({}, "__esModule", {
+            value: !0
+        }), o);
+        var c = e.r(2217);
+        let p =
+            /(?:youtu\.be\/|youtube(?:-nocookie|education)?\.com\/(?:embed\/|v\/|watch\/|watch\?v=|watch\?.+&v=|shorts\/|live\/))((\w|-){11})|youtube\.com\/playlist\?list=|youtube\.com\/user\//,
+            h = /(?:soundcloud\.com|snd\.sc)\/[^.]+$/,
+            d = /vimeo\.com\/(?!progressive_redirect).+/,
+            f = /stream\.mux\.com\/(?!\w+\.m3u8)(\w+)/,
+            y = /^https?:\/\/(www\.)?facebook\.com.*\/(video(s)?|watch|story)(\.php?|\/).+$/,
+            m = /^https?:\/\/fb\.watch\/.+$/,
+            b = /streamable\.com\/([a-z0-9]+)$/,
+            g = /(?:wistia\.(?:com|net)|wi\.st)\/(?:medias|embed)\/(?:iframe\/)?([^?]+)/,
+            v = /(?:www\.|go\.)?twitch\.tv\/videos\/(\d+)($|\?)/,
+            w = /(?:www\.|go\.)?twitch\.tv\/([a-zA-Z0-9_]+)($|\?)/,
+            P =
+            /^(?:(?:https?):)?(?:\/\/)?(?:www\.)?(?:(?:dailymotion\.com(?:\/embed)?\/video)|dai\.ly)\/([a-zA-Z0-9]+)(?:_[\w_-]+)?(?:[\w.#_-]+)?/,
+            E = /mixcloud\.com\/([^/]+\/[^/]+)/,
+            O = /vidyard.com\/(?:watch\/)?([a-zA-Z0-9-_]+)/,
+            S =
+            /^https?:\/\/[a-zA-Z]+\.kaltura.(com|org)\/p\/([0-9]+)\/sp\/([0-9]+)00\/embedIframeJs\/uiconf_id\/([0-9]+)\/partner_id\/([0-9]+)(.*)entry_id.([a-zA-Z0-9-_].*)$/,
+            k = /\.(m4a|m4b|mp4a|mpga|mp2|mp2a|mp3|m2a|m3a|wav|weba|aac|oga|spx)($|\?)/i,
+            x = /\.(mp4|og[gv]|webm|mov|m4v)(#t=[,\d+]+)?($|\?)/i,
+            j = /\.(m3u8)($|\?)/i,
+            M = /\.(mpd)($|\?)/i,
+            L = /\.(flv)($|\?)/i,
+            R = e => {
+                if (e instanceof Array) {
+                    for (let t of e)
+                        if ("string" == typeof t && R(t) || R(t.src)) return !0;
+                    return !1
+                }
+                return !!((0, c.isMediaStream)(e) || (0, c.isBlobUrl)(e)) || k.test(e) || x.test(e) || j.test(
+                    e) || M.test(e) || L.test(e)
+            },
+            T = {
+                youtube: e => e instanceof Array ? e.every(e => p.test(e)) : p.test(e),
+                soundcloud: e => h.test(e) && !k.test(e),
+                vimeo: e => d.test(e) && !x.test(e) && !j.test(e),
+                mux: e => f.test(e),
+                facebook: e => y.test(e) || m.test(e),
+                streamable: e => b.test(e),
+                wistia: e => g.test(e),
+                twitch: e => v.test(e) || w.test(e),
+                dailymotion: e => P.test(e),
+                mixcloud: e => E.test(e),
+                vidyard: e => O.test(e),
+                kaltura: e => S.test(e),
+                file: R
+            }
+    },
+    58293, (e, t, r) => {
+        let n, s, a;
+        var i = Object.create,
+            o = Object.defineProperty,
+            l = Object.getOwnPropertyDescriptor,
+            u = Object.getOwnPropertyNames,
+            c = Object.getPrototypeOf,
+            p = Object.prototype.hasOwnProperty,
+            h = (e, t, r, n) => {
+                if (t && "object" == typeof t || "function" == typeof t)
+                    for (let s of u(t)) p.call(e, s) || s === r || o(e, s, {
+                        get: () => t[s],
+                        enumerable: !(n = l(t, s)) || n.enumerable
+                    });
+                return e
+            },
+            d = (e, t, r) => {
+                let n;
+                return (n = "symbol" != typeof t ? t + "" : t) in e ? o(e, n, {
+                    enumerable: !0,
+                    configurable: !0,
+                    writable: !0,
+                    value: r
+                }) : e[n] = r, r
+            },
+            f = {},
+            y = {
+                default: () => x
+            };
+        for (var m in y) o(f, m, {
+            get: y[m],
+            enumerable: !0
+        });
+        t.exports = h(o({}, "__esModule", {
+            value: !0
+        }), f);
+        var b = (a = null != (n = e.r(53014)) ? i(c(n)) : {}, h(!s && n && n.__esModule ? a : o(a, "default", {
+                value: n,
+                enumerable: !0
+            }), n)),
+            g = e.r(2217),
+            v = e.r(7230);
+        let w = "u" > typeof navigator,
+            P = w && "MacIntel" === navigator.platform && navigator.maxTouchPoints > 1,
+            E = w && (/iPad|iPhone|iPod/.test(navigator.userAgent) || P) && !window.MSStream,
+            O = w && /^((?!chrome|android).)*safari/i.test(navigator.userAgent) && !window.MSStream,
+            S = /www\.dropbox\.com\/.+/,
+            k = /https:\/\/watch\.cloudflarestream\.com\/([a-z0-9]+)/;
+        class x extends b.Component {
+            constructor() {
+                super(...arguments), d(this, "onReady", (...e) => this.props.onReady(...e)), d(this,
+                    "onPlay", (...e) => this.props.onPlay(...e)), d(this, "onBuffer", (...e) => this
+                    .props.onBuffer(...e)), d(this, "onBufferEnd", (...e) => this.props.onBufferEnd(
+                    ...e)), d(this, "onPause", (...e) => this.props.onPause(...e)), d(this,
+                    "onEnded", (...e) => this.props.onEnded(...e)), d(this, "onError", (...e) =>
+                    this.props.onError(...e)), d(this, "onPlayBackRateChange", e => this.props
+                    .onPlaybackRateChange(e.target.playbackRate)), d(this, "onEnablePIP", (...e) =>
+                    this.props.onEnablePIP(...e)), d(this, "onDisablePIP", e => {
+                    let {
+                        onDisablePIP: t,
+                        playing: r
+                    } = this.props;
+                    t(e), r && this.play()
+                }), d(this, "onPresentationModeChange", e => {
+                    if (this.player && (0, g.supportsWebKitPresentationMode)(this.player)) {
+                        let {
+                            webkitPresentationMode: t
+                        } = this.player;
+                        "picture-in-picture" === t ? this.onEnablePIP(e) : "inline" === t &&
+                            this.onDisablePIP(e)
+                    }
+                }), d(this, "onSeek", e => {
+                    this.props.onSeek(e.target.currentTime)
+                }), d(this, "mute", () => {
+                    this.player.muted = !0
+                }), d(this, "unmute", () => {
+                    this.player.muted = !1
+                }), d(this, "renderSourceElement", (e, t) => "string" == typeof e ? b.default
+                    .createElement("source", {
+                        key: t,
+                        src: e
+                    }) : b.default.createElement("source", {
+                        key: t,
+                        ...e
+                    })), d(this, "renderTrack", (e, t) => b.default.createElement("track", {
+                    key: t,
+                    ...e
+                })), d(this, "ref", e => {
+                    this.player && (this.prevPlayer = this.player), this.player = e
+                })
+            }
+            componentDidMount() {
+                this.props.onMount && this.props.onMount(this), this.addListeners(this.player);
+                let e = this.getSource(this.props.url);
+                e && (this.player.src = e), (E || this.props.config.forceDisableHls) && this.player
+                    .load()
+            }
+            componentDidUpdate(e) {
+                this.shouldUseAudio(this.props) !== this.shouldUseAudio(e) && (this.removeListeners(this
+                        .prevPlayer, e.url), this.addListeners(this.player)), this.props.url === e
+                    .url || (0, g.isMediaStream)(this.props.url) || this.props.url instanceof Array || (
+                        this.player.srcObject = null)
+            }
+            componentWillUnmount() {
+                this.player.removeAttribute("src"), this.removeListeners(this.player), this.hls && this
+                    .hls.destroy()
+            }
+            addListeners(e) {
+                let {
+                    url: t,
+                    playsinline: r
+                } = this.props;
+                e.addEventListener("play", this.onPlay), e.addEventListener("waiting", this.onBuffer), e
+                    .addEventListener("playing", this.onBufferEnd), e.addEventListener("pause", this
+                        .onPause), e.addEventListener("seeked", this.onSeek), e.addEventListener(
+                        "ended", this.onEnded), e.addEventListener("error", this.onError), e
+                    .addEventListener("ratechange", this.onPlayBackRateChange), e.addEventListener(
+                        "enterpictureinpicture", this.onEnablePIP), e.addEventListener(
+                        "leavepictureinpicture", this.onDisablePIP), e.addEventListener(
+                        "webkitpresentationmodechanged", this.onPresentationModeChange), this
+                    .shouldUseHLS(t) || e.addEventListener("canplay", this.onReady), r && (e
+                        .setAttribute("playsinline", ""), e.setAttribute("webkit-playsinline", ""), e
+                        .setAttribute("x5-playsinline", ""))
+            }
+            removeListeners(e, t) {
+                e.removeEventListener("canplay", this.onReady), e.removeEventListener("play", this
+                        .onPlay), e.removeEventListener("waiting", this.onBuffer), e
+                    .removeEventListener("playing", this.onBufferEnd), e.removeEventListener("pause",
+                        this.onPause), e.removeEventListener("seeked", this.onSeek), e
+                    .removeEventListener("ended", this.onEnded), e.removeEventListener("error", this
+                        .onError), e.removeEventListener("ratechange", this.onPlayBackRateChange), e
+                    .removeEventListener("enterpictureinpicture", this.onEnablePIP), e
+                    .removeEventListener("leavepictureinpicture", this.onDisablePIP), e
+                    .removeEventListener("webkitpresentationmodechanged", this
+                    .onPresentationModeChange), this.shouldUseHLS(t) || e.removeEventListener("canplay",
+                        this.onReady)
+            }
+            shouldUseAudio(e) {
+                return !e.config.forceVideo && !e.config.attributes.poster && (v.AUDIO_EXTENSIONS.test(e
+                    .url) || e.config.forceAudio)
+            }
+            shouldUseHLS(e) {
+                return !!O && !!this.props.config.forceSafariHLS || !!this.props.config.forceHLS || !
+                    E && !this.props.config.forceDisableHls && (v.HLS_EXTENSIONS.test(e) || k.test(e))
+            }
+            shouldUseDASH(e) {
+                return v.DASH_EXTENSIONS.test(e) || this.props.config.forceDASH
+            }
+            shouldUseFLV(e) {
+                return v.FLV_EXTENSIONS.test(e) || this.props.config.forceFLV
+            }
+            load(e) {
+                let {
+                    hlsVersion: t,
+                    hlsOptions: r,
+                    dashVersion: n,
+                    flvVersion: s
+                } = this.props.config;
+                if (this.hls && this.hls.destroy(), this.dash && this.dash.reset(), this.shouldUseHLS(
+                    e) && (0, g.getSDK)("https://cdn.jsdelivr.net/npm/hls.js@VERSION/dist/hls.min.js"
+                        .replace("VERSION", t), "Hls").then(t => {
+                        if (this.hls = new t(r), this.hls.on(t.Events.MANIFEST_PARSED, () => {
+                                this.props.onReady()
+                            }), this.hls.on(t.Events.ERROR, (e, r) => {
+                                this.props.onError(e, r, this.hls, t)
+                            }), k.test(e)) {
+                            let t = e.match(k)[1];
+                            this.hls.loadSource("https://videodelivery.net/{id}/manifest/video.m3u8"
+                                .replace("{id}", t))
+                        } else this.hls.loadSource(e);
+                        this.hls.attachMedia(this.player), this.props.onLoaded()
+                    }), this.shouldUseDASH(e) && (0, g.getSDK)(
+                        "https://cdnjs.cloudflare.com/ajax/libs/dashjs/VERSION/dash.all.min.js".replace(
+                            "VERSION", n), "dashjs").then(t => {
+                        this.dash = t.MediaPlayer().create(), this.dash.initialize(this.player, e,
+                                this.props.playing), this.dash.on("error", this.props.onError), 3 >
+                            parseInt(n) ? this.dash.getDebug().setLogToBrowserConsole(!1) : this
+                            .dash.updateSettings({
+                                debug: {
+                                    logLevel: t.Debug.LOG_LEVEL_NONE
+                                }
+                            }), this.props.onLoaded()
+                    }), this.shouldUseFLV(e) && (0, g.getSDK)(
+                        "https://cdn.jsdelivr.net/npm/flv.js@VERSION/dist/flv.min.js".replace("VERSION",
+                            s), "flvjs").then(t => {
+                        this.flv = t.createPlayer({
+                            type: "flv",
+                            url: e
+                        }), this.flv.attachMediaElement(this.player), this.flv.on(t.Events
+                            .ERROR, (e, r) => {
+                                this.props.onError(e, r, this.flv, t)
+                            }), this.flv.load(), this.props.onLoaded()
+                    }), e instanceof Array) this.player.load();
+                else if ((0, g.isMediaStream)(e)) try {
+                    this.player.srcObject = e
+                } catch (t) {
+                    this.player.src = window.URL.createObjectURL(e)
+                }
+            }
+            play() {
+                let e = this.player.play();
+                e && e.catch(this.props.onError)
+            }
+            pause() {
+                this.player.pause()
+            }
+            stop() {
+                this.player.removeAttribute("src"), this.dash && this.dash.reset()
+            }
+            seekTo(e, t = !0) {
+                this.player.currentTime = e, t || this.pause()
+            }
+            setVolume(e) {
+                this.player.volume = e
+            }
+            enablePIP() {
+                this.player.requestPictureInPicture && document.pictureInPictureElement !== this
+                    .player ? this.player.requestPictureInPicture() : (0, g
+                        .supportsWebKitPresentationMode)(this.player) && "picture-in-picture" !== this
+                    .player.webkitPresentationMode && this.player.webkitSetPresentationMode(
+                        "picture-in-picture")
+            }
+            disablePIP() {
+                document.exitPictureInPicture && document.pictureInPictureElement === this.player ?
+                    document.exitPictureInPicture() : (0, g.supportsWebKitPresentationMode)(this
+                    .player) && "inline" !== this.player.webkitPresentationMode && this.player
+                    .webkitSetPresentationMode("inline")
+            }
+            setPlaybackRate(e) {
+                try {
+                    this.player.playbackRate = e
+                } catch (e) {
+                    this.props.onError(e)
+                }
+            }
+            getDuration() {
+                if (!this.player) return null;
+                let {
+                    duration: e,
+                    seekable: t
+                } = this.player;
+                return e === 1 / 0 && t.length > 0 ? t.end(t.length - 1) : e
+            }
+            getCurrentTime() {
+                return this.player ? this.player.currentTime : null
+            }
+            getSecondsLoaded() {
+                if (!this.player) return null;
+                let {
+                    buffered: e
+                } = this.player;
+                if (0 === e.length) return 0;
+                let t = e.end(e.length - 1),
+                    r = this.getDuration();
+                return t > r ? r : t
+            }
+            getSource(e) {
+                let t = this.shouldUseHLS(e),
+                    r = this.shouldUseDASH(e),
+                    n = this.shouldUseFLV(e);
+                if (!(e instanceof Array || (0, g.isMediaStream)(e)) && !t && !r && !n) return S.test(
+                    e) ? e.replace("www.dropbox.com", "dl.dropboxusercontent.com") : e
+            }
+            render() {
+                let {
+                    url: e,
+                    playing: t,
+                    loop: r,
+                    controls: n,
+                    muted: s,
+                    config: a,
+                    width: i,
+                    height: o
+                } = this.props, l = this.shouldUseAudio(this.props);
+                return b.default.createElement(l ? "audio" : "video", {
+                    ref: this.ref,
+                    src: this.getSource(e),
+                    style: {
+                        width: "auto" === i ? i : "100%",
+                        height: "auto" === o ? o : "100%"
+                    },
+                    preload: "auto",
+                    autoPlay: t || void 0,
+                    controls: n,
+                    muted: s,
+                    loop: r,
+                    ...a.attributes
+                }, e instanceof Array && e.map(this.renderSourceElement), a.tracks.map(this
+                    .renderTrack))
+            }
+        }
+        d(x, "displayName", "FilePlayer"), d(x, "canPlay", v.canPlay.file)
+    },
+    10618, (e, t, r) => {
+        var n = e.r(62119).createReactPlayer,
+            s = e.r(58293).default;
+        t.exports = n([{
+            key: "file",
+            canPlay: s.canPlay,
+            lazyPlayer: s
+        }])
+    },
+    35628, e => {
+        "use strict";
+        var t, r, n, s, a, i, o, l = e.i(71448),
+            u = e.i(53014),
+            c = e.i(10618),
+            p = e.i(73533);
+        let h = [
+                ["requestFullscreen", "exitFullscreen", "fullscreenElement", "fullscreenEnabled",
+                    "fullscreenchange", "fullscreenerror"
+                ],
+                ["webkitRequestFullscreen", "webkitExitFullscreen", "webkitFullscreenElement",
+                    "webkitFullscreenEnabled", "webkitfullscreenchange", "webkitfullscreenerror"
+                ],
+                ["webkitRequestFullScreen", "webkitCancelFullScreen", "webkitCurrentFullScreenElement",
+                    "webkitCancelFullScreen", "webkitfullscreenchange", "webkitfullscreenerror"
+                ],
+                ["mozRequestFullScreen", "mozCancelFullScreen", "mozFullScreenElement", "mozFullScreenEnabled",
+                    "mozfullscreenchange", "mozfullscreenerror"
+                ],
+                ["msRequestFullscreen", "msExitFullscreen", "msFullscreenElement", "msFullscreenEnabled",
+                    "MSFullscreenChange", "MSFullscreenError"
+                ]
+            ],
+            d = (() => {
+                if ("u" < typeof document) return !1;
+                let e = h[0],
+                    t = {};
+                for (let r of h)
+                    if (r?.[1] in document) {
+                        for (let [n, s] of r.entries()) t[e[n]] = s;
+                        return t
+                    } return !1
+            })(),
+            f = {
+                change: d.fullscreenchange,
+                error: d.fullscreenerror
+            },
+            y = {
+                request: (e = document.documentElement, t) => new Promise((r, n) => {
+                    let s = () => {
+                        y.off("change", s), r()
+                    };
+                    y.on("change", s);
+                    let a = e[d.requestFullscreen](t);
+                    a instanceof Promise && a.then(s).catch(n)
+                }),
+                exit: () => new Promise((e, t) => {
+                    if (!y.isFullscreen) return void e();
+                    let r = () => {
+                        y.off("change", r), e()
+                    };
+                    y.on("change", r);
+                    let n = document[d.exitFullscreen]();
+                    n instanceof Promise && n.then(r).catch(t)
+                }),
+                toggle: (e, t) => y.isFullscreen ? y.exit() : y.request(e, t),
+                onchange(e) {
+                    y.on("change", e)
+                },
+                onerror(e) {
+                    y.on("error", e)
+                },
+                on(e, t) {
+                    let r = f[e];
+                    r && document.addEventListener(r, t, !1)
+                },
+                off(e, t) {
+                    let r = f[e];
+                    r && document.removeEventListener(r, t, !1)
+                },
+                raw: d
+            };
+        Object.defineProperties(y, {
+            isFullscreen: {
+                get: () => !!document[d.fullscreenElement]
+            },
+            element: {
+                enumerable: !0,
+                get: () => document[d.fullscreenElement] ?? void 0
+            },
+            isEnabled: {
+                enumerable: !0,
+                get: () => !!document[d.fullscreenEnabled]
+            }
+        }), d || (y = {
+            isEnabled: !1
+        });
+        let m = y;
+        var b = e.i(7953),
+            g = e.i(57739),
+            v = e.i(21375);
+
+        function w() {
+            return (w = Object.assign.bind()).apply(null, arguments)
+        }
+        let P = e => u.createElement("svg", w({
+            xmlns: "http://www.w3.org/2000/svg",
+            width: 8,
+            height: 8,
+            fill: "none",
+            viewBox: "0 0 8 8"
+        }, e), t || (t = u.createElement("path", {
+            fill: "currentColor",
+            stroke: "currentColor",
+            strokeMiterlimit: 10,
+            d: "M1.906 1.116v5.768L6.233 4z"
+        })));
+
+        function E() {
+            return (E = Object.assign.bind()).apply(null, arguments)
+        }
+        let O = e => u.createElement("svg", E({
+            xmlns: "http://www.w3.org/2000/svg",
+            width: 24,
+            height: 24,
+            fill: "none",
+            viewBox: "0 0 24 24"
+        }, e), r || (r = u.createElement("path", {
+            stroke: "currentColor",
+            strokeWidth: 3,
+            d: "M7.5 4v16M16.5 4v16"
+        })));
+
+        function S() {
+            return (S = Object.assign.bind()).apply(null, arguments)
+        }
+        let k = e => u.createElement("svg", S({
+            xmlns: "http://www.w3.org/2000/svg",
+            width: 24,
+            height: 24,
+            fill: "none",
+            viewBox: "0 0 24 24"
+        }, e), n || (n = u.createElement("path", {
+            fill: "#fff",
+            d: "M2.462 7.808v-.721h-.72v.72zm4.846 0v.721h.252l.197-.156zm6.695-5.315h.72V1l-1.169.929zm0 18.323-.449.565 1.17.928v-1.493zM7.308 15.5l.448-.565-.197-.156h-.251zm-4.846 0h-.72v.722h.72zm.722-3.846V7.808H1.74v3.847zm-.722-3.126h4.846V7.087H2.462zm5.295-.156 6.694-5.315-.897-1.13L6.86 7.244zm5.524-5.88v18.323h1.443V2.493zm1.17 17.758-6.695-5.315-.896 1.13 6.694 5.315zm-7.143-5.47H2.462v1.442h4.846zm-4.124.72v-3.846H1.74V15.5z"
+        })));
+
+        function x() {
+            return (x = Object.assign.bind()).apply(null, arguments)
+        }
+        let j = e => u.createElement("svg", x({
+            xmlns: "http://www.w3.org/2000/svg",
+            width: 24,
+            height: 24,
+            fill: "none",
+            viewBox: "0 0 24 24"
+        }, e), s || (s = u.createElement("path", {
+            fill: "#fff",
+            d: "M2.463 7.808v-.721h-.72v.72zm4.846 0v.721h.252l.197-.156zm6.695-5.315h.72V1l-1.169.929zm0 18.323-.449.565 1.17.928v-1.493zM7.309 15.5l.448-.565-.197-.156H7.31zm-4.846 0h-.72v.722h.72zm.722-3.846V7.808H1.742v3.847zm-.722-3.126H7.31V7.087H2.463zm5.295-.156 6.694-5.315-.897-1.13-6.694 5.315zm5.524-5.88v18.323h1.443V2.493zm1.17 17.758-6.695-5.315-.896 1.13 6.694 5.315zm-7.143-5.47H2.463v1.442H7.31zm-4.124.72v-3.846H1.742V15.5z"
+        })), a || (a = u.createElement("path", {
+            stroke: "#fff",
+            strokeWidth: 1.923,
+            d: "M17.848 7.808v7.694M21.695 5.885v11.54"
+        })));
+
+        function M() {
+            return (M = Object.assign.bind()).apply(null, arguments)
+        }
+        let L = e => u.createElement("svg", M({
+            xmlns: "http://www.w3.org/2000/svg",
+            width: 24,
+            height: 24,
+            fill: "none",
+            viewBox: "0 0 24 24"
+        }, e), i || (i = u.createElement("path", {
+            stroke: "#fff",
+            strokeWidth: 1.6,
+            d: "M8.5 21.5v-6h-6M15.5 21.5v-6h6M8.5 2.5v6h-6M15.5 2.5v6h6"
+        })));
+
+        function R() {
+            return (R = Object.assign.bind()).apply(null, arguments)
+        }
+        let T = e => u.createElement("svg", R({
+            xmlns: "http://www.w3.org/2000/svg",
+            width: 24,
+            height: 24,
+            fill: "none",
+            viewBox: "0 0 24 24"
+        }, e), o || (o = u.createElement("path", {
+            stroke: "#fff",
+            strokeWidth: 1.6,
+            d: "M8.5 21.5v-6h-6M15.5 21.5v-6h6M8.5 2.5v6h-6M15.5 2.5v6h6"
+        })));
+        var C = e.i(92238),
+            I = e.i(70733);
+        let _ = e => (0, l.jsxs)("div", {
+                className: "relative w-full h-20 my-10 overflow-hidden",
+                children: [(0, l.jsx)("input", {
+                    ...e,
+                    onTouchStart: e.onMouseDown,
+                    onTouchEnd: e.onMouseUp,
+                    className: "absolute z-1 inset-0 appearance-none outline-0 bg-transparent border-0 p-0 m-0 select-none cursor-pointer [&::-webkit-slider-thumb]:opacity-0",
+                    type: "range",
+                    min: 0,
+                    max: .999999,
+                    step: "any",
+                    "aria-label": "Video timeline controller"
+                }), (0, l.jsxs)("div", {
+                    className: "absolute z-0 top-1/2 left-0 w-full h-2 -mt-1 overflow-hidden before:block before:w-full before:h-full before:bg-current before:opacity-30",
+                    children: [(0, l.jsx)("div", {
+                        className: "absolute bg-current w-full top-0 right-full h-full",
+                        "aria-label": "Progress",
+                        "aria-hidden": !0,
+                        style: {
+                            transform: `translateX(${100*e.value}%) translateZ(0)`
+                        }
+                    }), (0, l.jsx)("div", {
+                        className: "absolute bg-current opacity-30 w-full top-0 right-full h-full transition-transform",
+                        "aria-label": "Buffer",
+                        "aria-hidden": !0,
+                        style: {
+                            transform: `translateX(${100*e.loaded}%) translateZ(0)`
+                        }
+                    })]
+                })]
+            }),
+            A = e => (0, l.jsxs)("div", {
+                className: (0, I.default)("relative w-54 h-15 overflow-hidden", e.className),
+                children: [(0, l.jsx)("input", {
+                    ...e,
+                    className: "absolute z-1 inset-0 appearance-none outline-0 bg-transparent border-0 p-0 m-0 select-none cursor-pointer [&::-webkit-slider-thumb]:opacity-0",
+                    type: "range",
+                    min: 0,
+                    max: .999999,
+                    step: .01,
+                    "aria-label": "Video sound volume controller"
+                }), (0, l.jsx)("div", {
+                    className: "absolute z-0 top-1/2 left-0 w-full h-2 -mt-1 overflow-hidden before:block before:w-full before:h-full before:bg-current before:opacity-40",
+                    children: (0, l.jsx)("div", {
+                        className: "absolute bg-current w-full top-0 right-full h-full",
+                        "aria-label": "Progress",
+                        "aria-hidden": !0,
+                        style: {
+                            transform: `translateX(${e.muted?0:100*e.value}%) translateZ(0)`
+                        }
+                    })
+                })]
+            }),
+            N = ({
+                title: e,
+                controls: t,
+                controlsClassname: r,
+                onTogglePlay: n,
+                onToggleMute: s,
+                onVolumeChange: a,
+                onToggleFullscreen: i,
+                onSeekChange: o,
+                onSeekMouseDown: c,
+                onSeekMouseUp: p,
+                playing: h = !1,
+                muted: d = !1,
+                fullscreen: f,
+                loaded: y = 0,
+                played: m = 0,
+                volume: b = 1,
+                duration: w = 0,
+                progress: E = 0,
+                isActive: S = !1,
+                theme: x = "white",
+                variant: M = "none"
+            }) => {
+                let [R, N] = (0, u.useState)(!1), D = (0, C.default)();
+                (0, u.useEffect)(() => {
+                    (!document.fullscreenEnabled || v.iOS) && N(!0)
+                }, []);
+                let U = e => `${(e/60|0).toString().padStart(2,"0")} : ${(e%60|0).toString().padStart(2,"0")}`;
+                return (0, l.jsxs)("div", {
+                    className: (0, I.default)("absolute z-0 inset-0 transition-opacity", {
+                        white: "text-white",
+                        black: "text-black"
+                    } [x], S ? "opacity-100 duration-600" : "opacity-0 duration-1000"),
+                    children: [(0, l.jsx)("div", {
+                        className: "absolute z-0 inset-0 flex items-center justify-center",
+                        onClick: n
+                    }), (0, l.jsx)("div", {
+                        className: (0, I.default)("text-10",
+                            "flex items-center jutify-between gap-x-15 mb-20 margin-mx-1",
+                            "absolute z-1 bottom-0 left-0 right-0 text-12 opacity-100 transition-opacity ease-quart-out",
+                            r),
+                        children: t && t.map((t, r) => ((t, r) => {
+                            switch (t) {
+                                case "play":
+                                    return (0, l.jsx)(g.Button, {
+                                        variant: "none",
+                                        className: "p-4 -m-4",
+                                        onClick: n,
+                                        "aria-label": h ? D("Pause") :
+                                            D("Play"),
+                                        children: h ? (0, l.jsx)(O, {
+                                            className: "w-16"
+                                        }) : (0, l.jsx)(P, {
+                                            className: "w-16"
+                                        })
+                                    }, r);
+                                case "progress":
+                                    return (0, l.jsx)(_, {
+                                        value: m,
+                                        loaded: y,
+                                        onChange: o,
+                                        onMouseDown: c,
+                                        onMouseUp: p
+                                    }, r);
+                                case "mute":
+                                    return (0, l.jsx)(g.Button, {
+                                        variant: "none",
+                                        className: (0, I.default)(
+                                            "lg-max:hidden p-4 -m-4",
+                                            "[&+.volume]:-ml-6"),
+                                        onClick: s,
+                                        "aria-label": d ? D("Unmute") :
+                                            D("Mute"),
+                                        children: d ? (0, l.jsx)(k, {
+                                            className: "w-16"
+                                        }) : (0, l.jsx)(j, {
+                                            className: "w-16"
+                                        })
+                                    }, r);
+                                case "fullscreen":
+                                    return (0, l.jsx)(g.Button, {
+                                        variant: "none",
+                                        className: (0, I.default)(
+                                            "p-4 -m-4", R &&
+                                            "hidden"),
+                                        onClick: i,
+                                        "aria-label": f ? D(
+                                            "Exit fullscreen") : D(
+                                            "Enter fullscreen"),
+                                        children: f ? (0, l.jsx)(T, {
+                                            className: "w-16"
+                                        }) : (0, l.jsx)(L, {
+                                            className: "w-16"
+                                        })
+                                    }, r);
+                                case "current-time":
+                                    return (0, l.jsx)("span", {
+                                        className: "whitespace-nowrap",
+                                        children: U(E)
+                                    }, r);
+                                case "duration":
+                                    return (0, l.jsx)("span", {
+                                        className: "whitespace-nowrap",
+                                        children: U(w)
+                                    }, r);
+                                case "full-time":
+                                    return (0, l.jsxs)(u.Fragment, {
+                                        children: [(0, l.jsxs)("span", {
+                                            className: (0, I
+                                                .default
+                                                )(
+                                                "inline-flex items-center justify-center gap-x-8 mx-auto whitespace-nowrap",
+                                                "modal" ===
+                                                M &&
+                                                "-z-1 absolute inset-x-0 bottom-0 h-16 lg:h-24"
+                                                ),
+                                            children: [(0, l
+                                                    .jsx
+                                                    )(
+                                                    "span", {
+                                                        children: U(
+                                                            E
+                                                            )
+                                                    }),
+                                                "|", (0,
+                                                    l
+                                                    .jsx
+                                                    )(
+                                                    "span", {
+                                                        children: U(
+                                                            w
+                                                            )
+                                                    })
+                                            ]
+                                        }), "modal" === M && (0,
+                                            l.jsx)("span", {
+                                            className: "grow"
+                                        })]
+                                    }, r);
+                                case "title":
+                                    return (0, l.jsx)("span", {
+                                        className: (0, I.default)(
+                                            "span-w-9 lg:span-w-6 my-10 text-12 leading-snug uppercase",
+                                            "modal" === M &&
+                                            "absolute left-0 bottom-full pointer-events-none"
+                                            ),
+                                        children: e
+                                    }, r);
+                                case "volume":
+                                    return (0, l.jsx)(A, {
+                                        className: "volume lg-max:hidden",
+                                        value: b,
+                                        muted: d,
+                                        onChange: a
+                                    }, r)
+                            }
+                        })(t, `${t}-${r}`))
+                    })]
+                })
+            };
+        var D = e.i(976),
+            U = e.i(50342),
+            z = e.i(43463);
+        e.s(["VideoPlayer", 0, ({
+            urls: e,
+            playing: t = !1,
+            config: r,
+            title: n,
+            className: s,
+            controlsClassname: a,
+            muted: i = !1,
+            loop: o = !1,
+            autoPlay: h = !1,
+            autoPause: d = !1,
+            controls: f = ["play", "mute", "current-time", "progress", "duration",
+                "fullscreen"],
+            onReady: y,
+            onTogglePlay: v,
+            onEnded: w,
+            light: E = !1,
+            theme: O = "white",
+            variant: S = "none",
+            poster: k
+        }) => {
+            var x;
+            let j, M, L, R = (0, u.useRef)(),
+                T = (0, u.useRef)(),
+                [C, _] = (0, u.useState)(!1),
+                [A, H] = (0, u.useState)(!1),
+                [V, F] = (0, u.useState)(!!t || i),
+                [B, $] = (0, u.useState)(t),
+                [W, q] = (0, u.useState)(!0),
+                [X, K] = (0, u.useState)("mouseOnly"),
+                [Z, Y] = (0, u.useState)(!1),
+                [Q, G] = (0, u.useState)(""),
+                J = (0, u.useRef)(),
+                ee = Object.entries(e.reduce((e, t) => ({
+                    ...e,
+                    [t.width]: t.url
+                }), {})).sort((e, t) => parseInt(t[0]) - parseInt(e[0])).map(e => [parseInt(e[0]),
+                    e[1]
+                ]),
+                [et, er] = (0, p.useInView)({
+                    rootMargin: "0px",
+                    skip: !d,
+                    initialInView: !d
+                }),
+                en = (0, u.useCallback)(e => {
+                    T.current = e, et(e)
+                }, [et]);
+            (0, u.useEffect)(() => {
+                H(!0)
+            }, []), (0, u.useEffect)(() => {
+                v && v(B), B && W && q(!1)
+            }, [B]), (0, u.useEffect)(() => {
+                $(t)
+            }, [t]), (0, u.useEffect)(() => {
+                C && !er && B && $(!1)
+            }, [er]), (0, u.useEffect)(() => {
+                F(i)
+            }, [i]);
+            let [es, ea] = (0, u.useState)({
+                pip: !1,
+                wasPlaying: B,
+                fullscreen: !1,
+                seeking: !1,
+                controls: !1,
+                light: E,
+                volume: 1,
+                played: 0,
+                loaded: 0,
+                playedSeconds: 0,
+                duration: 0,
+                playbackRate: 1,
+                playsinline: !1,
+                loop: o
+            });
+            (0, u.useEffect)(() => {
+                K(b.deviceType)
+            }, []), (0, u.useEffect)(() => {
+                let e = () => {
+                    ea({
+                        ...es,
+                        fullscreen: m.isFullscreen
+                    })
+                };
+                if (m.isEnabled) return m.on("change", e), () => {
+                    m.off("change", e)
+                }
+            }, [es]);
+            let ei = (e = !1) => {
+                    Y(!0), clearTimeout(J.current), (!es.seeking || e) && (J.current = setTimeout(
+                    () => {
+                            Y(!1)
+                        }, 2500))
+                },
+                eo = (0, u.useCallback)(() => {
+                    $(!0), Y(!0)
+                }, []),
+                el = (0, u.useCallback)(() => {
+                    $(!1), ei()
+                }, []),
+                eu = () => {
+                    $(!B), ei()
+                };
+            return (0, U.default)(T, (0, D.default)(t => {
+                if (T.current && e) {
+                    let e = ee.filter(e => t.contentRect.width < e[0]);
+                    G(e?.length ? e[0][1] : ee[0][1])
+                }
+            }, 50, [])), (0, l.jsxs)("div", {
+                ref: en,
+                className: (0, I.default)(
+                    "relative flex items-start flex-col lg-max:-margin-mx-1", s),
+                onMouseMove: e => {
+                    !C || Math.sqrt(e.movementX * e.movementX + e.movementY * e
+                        .movementY) > 1 && ei()
+                },
+                children: [(0, l.jsxs)("div", {
+                    className: (0, I.default)(
+                        "relative w-full aspect-[375/252] lg:aspect-video m-auto",
+                        !es.fullscreen && "max-h-screen"),
+                    children: [A && (0, l.jsx)(c.default, {
+                        ref: R,
+                        autoPlay: h,
+                        url: Q,
+                        pip: es.pip,
+                        playing: B,
+                        controls: es.controls,
+                        light: es.light,
+                        loop: es.loop,
+                        playbackRate: es.playbackRate,
+                        volume: es.volume,
+                        muted: V,
+                        playsinline: es.playsinline,
+                        config: r || {},
+                        width: "100%",
+                        height: "100%",
+                        className: "[&_video]:object-cover",
+                        onDuration: e => {
+                            ea({
+                                ...es,
+                                duration: e
+                            })
+                        },
+                        onReady: () => {
+                            _(!0), y && y()
+                        },
+                        onPlay: eo,
+                        onPause: el,
+                        onProgress: e => {
+                            es.seeking || ea({
+                                ...es,
+                                ...e
+                            })
+                        },
+                        onEnded: () => {
+                            q(!0), w && w()
+                        },
+                        onError: e => console.warn(
+                            "videoplayer error", e)
+                    }), (0, l.jsx)(N, {
+                        isActive: C && ("touchOnly" === X || Z),
+                        title: n,
+                        controls: f,
+                        controlsClassname: a,
+                        onTogglePlay: eu,
+                        onToggleMute: () => {
+                            F(!V)
+                        },
+                        onVolumeChange: e => {
+                            ea({
+                                ...es,
+                                volume: parseFloat(e
+                                    .target.value)
+                            }), F(e.target.value < .01)
+                        },
+                        onToggleFullscreen: () => {
+                            m.isEnabled && m.toggle(T.current)
+                        },
+                        onSeekChange: e => {
+                            R.current?.seekTo(parseFloat(e
+                                .target.value)), ea({
+                                ...es,
+                                played: parseFloat(e
+                                    .target.value)
+                            })
+                        },
+                        onSeekMouseDown: () => {
+                            ea({
+                                ...es,
+                                wasPlaying: B,
+                                seeking: !0
+                            }), $(!1), ei()
+                        },
+                        onSeekMouseUp: () => {
+                            ea({
+                                ...es,
+                                seeking: !1
+                            }), $(es.wasPlaying), ei(!0)
+                        },
+                        fullscreen: es.fullscreen,
+                        playing: B,
+                        muted: V,
+                        loaded: es.loaded,
+                        progress: es.playedSeconds,
+                        duration: es.duration,
+                        played: es.played,
+                        volume: es.volume,
+                        theme: O,
+                        variant: S
+                    }), (0, l.jsxs)("div", {
+                        className: (0, I.default)(
+                            "absolute z-2 inset-0 opacity-100 visible transition-[opacity,visiblity] duration-[0.5s,0s] delay-[0s,0.5s] ease-quart-out",
+                            !W && C && "opacity-0 invisible"),
+                        children: [k && (0, l.jsxs)(l.Fragment, {
+                            children: [(0, l.jsx)(z
+                                .SanityImage, {
+                                    image: k,
+                                    width: 1440,
+                                    height: 9 /
+                                        16 *
+                                        1440,
+                                    desktopWidth: 1440,
+                                    fill: !0,
+                                    desktopOnly:
+                                        !0
+                                }), (0, l.jsx)(z
+                                .SanityImage, {
+                                    image: k,
+                                    width: 335,
+                                    height: 425,
+                                    mobileWidth: 335,
+                                    fill: !0,
+                                    mobileOnly:
+                                        !0
+                                })]
+                        }), (0, l.jsx)(g.Button, {
+                            onClick: eu,
+                            className: "absolute inset-0 z-3 w-full h-full grid place-content-center bg-black/30",
+                            "aria-label": "play video",
+                            children: (0, l.jsx)(
+                            "span", {
+                                className: "w-40 h-40 grid place-content-center bg-white",
+                                children: (0, l
+                                    .jsx)(
+                                P, {
+                                    className: "w-8 h-8"
+                                })
+                            })
+                        })]
+                    })]
+                }), (0, l.jsxs)("div", {
+                    className: (0, I.default)(
+                        "z-2 pointer-events-none font-mono w-full",
+                        "flex items-center justify-between mt-10 lg-max:margin-px-1"
+                        ),
+                    children: [(0, l.jsx)("p", {
+                        className: (0, I.default)(
+                            "flex items-center before:block before:w-4 before:h-4 before:mr-6 before:bg-black",
+                            "text-black text-10 uppercase"),
+                        children: n
+                    }), (0, l.jsxs)("span", {
+                        className: "text-10 text-black",
+                        children: ["[", (j = ((x = es.duration) /
+                                3600 | 0).toString()
+                            .padStart(2, "0"), M = (x %
+                                3600 / 60 | 0).toString()
+                            .padStart(2, "0"), L = Math
+                            .round(x % 60).toString()
+                            .padStart(2, "0"),
+                            `${j}:${M}:${L}`), "]"]
+                    })]
+                })]
+            })
+        }], 35628)
+    }
+]);
